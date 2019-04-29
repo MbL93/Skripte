@@ -1,0 +1,6 @@
+\babel@toc {german}{}
+\beamer@sectionintoc {1}{Grundlagen}{5}{0}{1}
+\beamer@sectionintoc {2}{Untersuchte Speicherkonsistenzmodelle}{21}{0}{2}
+\beamer@sectionintoc {3}{Gegen\IeC {\"u}berstellung}{43}{0}{3}
+\beamer@sectionintoc {4}{Andere Ans\IeC {\"a}tze}{45}{0}{4}
+\beamer@sectionintoc {5}{Fazit}{47}{0}{5}

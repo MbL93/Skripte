@@ -1,0 +1,455 @@
+% Encoding: UTF-8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% $Id: vorlage.tex 131 2016-08-18 15:25:17Z friebmar $
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Vorlage fuer Seminararbeiten
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Changelog
+% 2018-03-20 (HF)  Kleinere Anpassungen, Umstellung auf biber/biblatex
+% 2016-02-03 (MF)  Einige Erweiterungen basierend auf Reflexion des Seminars
+% 2015-10-15 (MF)  Kleinere Verbesserungen, z.T. aus Abschlussarbeiten-Vorlage
+% 2014-07-08 (JM)  Komplett umstrukturiert
+% 2012-06-03 (SW)  Kleine Änderungen am Format
+% 2012-03-11 (SM)  Anhänge: Hinweise und Bewertungskriterien angefügt
+% 2011-02-11 (FAK) cls erstellt
+% 2011-02-03 (FAK) erstellt aus alter Vorlage
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% statt "final" können Sie auch "draft" verwenden. LaTeX zeigt dann
+% durch Markierungen am Rand, an welchen Stellen es noch Probleme mit
+% dem Satz gibt (-> übervolle hboxes). Bilder werden im Draft-Modus
+% nur als Boxen angezeigt.
+\documentclass[final,bibliography=totocnumbered]{include/sikseminar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Packages
+%% Folgende Pakete werden bereits durch die sikseminar-Klasse geladen:
+%\usepackage[german]{babel}
+%\usepackage[headsepline]{scrlayer-scrpage}
+%\usepackage{german}
+%\usepackage{graphicx}
+%\usepackage{textcomp}
+%\usepackage{bibgerm}
+
+\usepackage[utf8]{inputenc} % text encoding is UTF-8
+%% Falls Ihr Betriebssystem nicht in der Lage ist, utf-8-codierten
+%% Text zu erstellen, verwenden Sie stattdessen latin1:
+%\usepackage[latin1]{inputenc} % text encoding is latin1
+%% Entfernen Sie dann auch die erste Zeile dieses Dokuments!
+
+% Paket, um sich todo-Anmerkungen im Dokument zu machen
+\usepackage{todonotes}
+
+% MicroType nutzt Mikrofreiräume
+% => weniger Trennungen, evtl. weniger "overfull hbox" Fehlermeldungen
+%\usepackage[protrusion=true, expansion=true, final]{microtype}
+
+%% falls Sie weitere Pakete benoetigen, geben Sie diese hier an
+
+%\usepackage[foo]{bar}
+
+% Zum Anzeigen von Links und Verlinkung von dokumentinternen Verweisen
+% hyperref sollte immer als letztes geladen werden, da es einige LaTeX-interne
+% Kommandos umdefiniert
+\usepackage{hyperref}
+\hypersetup{colorlinks = true,linkcolor = black,citecolor = black,urlcolor = black,filecolor = black}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% allgemeine Definitionen
+
+\graphicspath{{./figures/}}
+
+% Satz aufhuebschen
+\clubpenalty=10000  % Keine Schusterjungen, Hurens"ohne
+\widowpenalty=10000
+
+%%% overfull hboxes markieren
+\overfullrule=1mm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jetzt geht's los!
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Titleseite
+
+% Thema
+%\Title[Seminarvorlage]  % Kurztitel für Kopfzeilen
+%      {Seminarvorlage mit Hinweisen zur Erstellung} % Ausführlicher Titel, der etwas mehr Platz braucht
+\Title[Kurztitel für Kopfzeilen]{Ausführlicher Titel, der etwas mehr Platz braucht}
+\makeTitle
+
+% Vorname Nachname des Autors
+\Author{Vorname Nachname}
+\Studiengang{Studiengang}
+\makeAuthor
+
+% Abgabedatum
+\date{Datum des Vortrags}
+
+% Bezeichnung des Seminars
+\subject{Seminarvorlage mit Hinweisen zur Erstellung}
+%\subject{Seminar Cyber-Physical Systems} % WS BA
+%\subject{Seminar Safety-Critical Systems} % WS MA
+%\subject{Seminar Grundlagen moderner Prozessorarchitekturen} % SS BA
+%\subject{Seminar Prozessorarchitekturen:\\Aktuelle Forschungsthemen} % SS MA
+
+
+% Titelseite anzeigen
+\maketitle
+
+
+\begin{abstract}
+\section*{Kurzfassung}
+Eine kurze Zusammenfassung der Ausarbeitung mit 10-12 Zeilen Text.
+\end{abstract}
+\thispagestyle{empty}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inhaltsverzeichnis anzeigen
+\tableofcontents
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Die eigentliche Arbeit
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Hinweise für die Ausarbeitung}
+
+Die schriftliche Seminararbeit sollte zum vereinbarten Zeitpunkt dem Betreuer in der endgültigen Fassung vorliegen. Dies soll zur Stressvermeidung am Ende des Semesters dienen, so dass die anschließende Zeit der Vortragsvorbereitung zur Verfügung steht.
+
+Die Ausarbeitung ist keine wörtliche Übersetzung, sondern eine Zusammenfassung der zugrundeliegenden Literaturquellen, welche durch Beispiele, Skizzen und Vergleiche ergänzt werden sollte.
+
+
+
+\subsection{Sprache und Rechtschreibung}
+Die Ausarbeitung soll auf \textbf{deutsch} verfasst werden. Denn dadurch ist man gezwungen, die meist englischsprachige Literatur wirklich zu verstehen und die Zusammenhänge in eigenen Worten auszudrücken. Die Gefahr, Abschnitte einfach nur zu kopieren ist ebenfalls deutlich geringer. Beachten Sie aber, dass auch eine Übersetzung ohne Kenntlichmachung der Quelle ein Plagiat ist und zum Nichtbestehen des Seminars führt.
+
+In Ausnahmefällen, z.~B. wenn deutsch nicht die Muttersprache ist oder ein Masterstudierender es ausdrücklich wünscht, kann nach Absprache mit dem Betreuer der Text auch in englisch abgefasst werden. Jedoch werden dann die gleichen hohen Anforderung an Rechtschreibung, Grammatik, Form und Stil gestellt wie an einen deutschen Text, d.~h. es wird das sehr gute englisch eines Muttersprachlers erwartet.
+
+Ein weiterer Grund für die Abfassung auf deutsch ist die Einübung des Umgangs mit englischen Fachbegriffen in deutschen Texten. Englische Begriffe, für die eine gebräuchliche deutsche Übersetzung existiert, sollten übersetzt werden; schwer zu übersetzende bzw. im Deutschen gebräuchliche englischsprachige Fachbegriffe müssen jedoch nicht ersetzt werden. 
+
+In jedem Fall ist die deutsche Rechtschreibung anzuwenden, d.~h. wenn mehrere Wörter einen Begriff bilden, wird dieser zusammengeschrieben, zur besseren Lesbarkeit optional durch Bindestriche verbunden. Der erste Buchstabe wird dabei immer groß geschieben, nach einem Bindestrich nur, wenn es sich um ein Hauptwort handelt. Dies gilt auch wenn Teile des Begriffs deutsche Wörter sind. Ist das erste Wort ein Adjektiv, wie z.B. bei ``Open Source'', ``First Level'' oder ``Single Point of Failure'' wird das Adjektiv groß und die Bestandteile nicht zusammengeschrieben. Fragen Sie im Zweifelsfall den Betreuer nach konkreter Empfehlungen. Er weiß auch, welche deutschsprachigen Wörter in einem bestimmten Kontext üblich sind. Auf jeden Fall sollte die entsprechend vereinbarte Verwendung und Schreibung in der gesamten Ausarbeitung durchgehend beibehalten werden.
+
+Am Ende sollte die Seminararbeit auf jeden Fall einer Rechtschreibprüfung unterzogen werden. Jeder übersieht nach gewisser Zeit viele einfache Fehler in seiner eigenen Arbeit. Um dies zu vermeiden, sollte man die Ausarbeitung jemand anderen zum Korrekturlesen geben. Zumindest sollte ein aktuelles Tool zur Rechtschreibprüfung zu Rate gezogen werden, z.B. \texttt{aspell}.
+
+
+
+\subsection{Umfang}
+\label{hinweise:umfang}
+Alle Seitenangaben beziehen sich auf die komplette schriftliche Ausarbeitung im Format A4, inklusive Deckblatt, Gliederung und Literaturverzeichnis.
+
+Die Ausarbeitung sollte im \textbf{Bachelorstudiengang} mindestens 12 Seiten umfassen, mehr als 15 Seiten müssen mit dem Betreuer abgesprochen werden und es sollte ein Grund dafür vorliegen, z.B.
+\begin{itemize}
+  \item ein sehr langes Literaturverzeichnis
+  \item viele (aussagekräftige) Bilder und Diagramme
+  \item ein spezielles Thema, dass eine umfangreiche Einführung in das Thema verlangt
+\end{itemize}
+Auf keinen Fall sollten bei mehr als 15 Seiten Teile der Ausarbeitung langatmige oder sich wiederholende Passagen enthalten.
+
+Im \textbf{Masterstudiengang} sollte die Ausarbeitung maximal 20 Seiten umfassen. Da hier besonderer Wert darauf gelegt wird, einen komplizierten Sachverhalt auf einer begrenzten Seitenzahl darzustellen (wie dies bei wissenschaftlichen Veröffentlichungen oft der Fall ist), können längere Ausarbeitungen nur in Ausnahmefällen und nach Rücksprache mit dem Betreuer akzeptiert werden.
+
+Verzichten Sie auf unnötige Seitenumbrüche, auch wenn die Arbeit eher kurz wirkt. Dies ist eher ein Zeichen dafür, dass Sie noch nicht genug zum Thema erzählt haben, da die Seminarthemen üblicherweise so gestellt sind, dass es mehr als genug zu schreiben gibt.
+
+
+\subsection{Formatierung}
+Damit die Ausarbeitungen ein einheitliches Aussehen haben, soll diese \LaTeX-Vorlage verwendet werden. Alternativ kann auch eine eigene identisch formatierte Vorlage verwendet werden. Wir empfehlen aber, die Gelegenheit zu nutzen um sich in \LaTeX\ einzuarbeiten. Bitte nehmen Sie \textbf{keine} Änderungen an der Vorlage vor.
+
+\LaTeX\ wurde von Leslie Lamport als Makropaket zur bequemeren Nutzung von \TeX\ entwickelt. Er hat auch ein Buch dazu veröffentlicht \cite{lamport94latex}. Eine deutsche Einf"uhrung in \LaTeX{} finden Sie in dem Buch von
+Kopka~\cite{kopka00latex1} oder im Internet (z.B. unter \url{http://en.wikibooks.org/wiki/LaTeX}). Im folgenden werden die jeweils passenden \LaTeX-Makros erwähnt. Für ihre korrekte Anwendung werfen Sie bitte einen Blick in den Quellcode dieser Vorlage, alle erwähnten Makros werden in diesem Dokument mindestens einmal verwendet.
+
+Wie Sie der Vorlage entnehmen können, beginnt die schriftliche Ausarbeitung mit einem Deckblatt, auf dem der Titel des Seminars, das konkreten Thema, der Vor- und Familienname des Autors, der Name des Professors und des Lehrstuhl angegeben sind. Außerdem enthält die Titelseite eine kurze Zusammenfassung (Abstract) von 100 bis 150 Wörtern.
+
+Einzelne Textteile können mittels \verb+\textXX+ \textbf{fett}, \textit{kursiv} oder als \textsc{Small Caps} hervorgehoben werden. F"ur einfache Hervorhebungen sollten Sie aber besser das \verb+\emph+-Kommando \emph{benutzen}, da dieses auch geschachtelt werden kann. Seien Sie mit Hervorhebungen aber zurückhaltend und nutzen Sie sie nur, wo sie \underline{wirklich} hilfreich sind!
+
+\subsection{Gliederung}
+\label{hinweise:gliederung}
+Die Gliederung sollte nicht mehr als 3 Ebenen haben und aus aussagekräftigen Überschriften bestehen (nicht einfach ``Anfang'', ``Hauptteil'', ``Schluss''), die sich nicht mit Überschriften zu Unterpunkten oder dem Titel der Seminararbeit decken. Zu jedem Gliederungspunkt sollte es einen Textabschnitt geben, d.~h. im Hauptteil sollten nie zwei Abschnittsüberschriften direkt aufeinaner folgen, sondern immer durch einen Text getrennt sein -- und wenn es sich nur um einen kurzen erklärenden Satz handelt. In \LaTeX verwendet man \verb+\section{}+, \verb+\subsection{}+, \verb+\subsubsection{}+ und \verb+\paragraph{}+ für die verschiedenen Gliederungsebenen. Dabei sollten Überschriften in der gleichen Gliederungsstufe (z.B. 1.1 und 1.2) mit einem gleichen inhaltlichen bzw. logischen Rang korrespondieren.
+
+Es gibt keine generelle Empfehlung bezüglich der Gliederung. Diese sollte aber auf jeden Fall mit dem Betreuer abgesprochen werden. Mit der nachfolgenden Unterteilung der schriftlichen Ausarbeitung kann man in den seltensten Fällen einen Fehler machen:
+\begin{enumerate}
+	\item Einleitung
+	\item Grundlagen
+	\item Hauptteil (in Abschnitte unterteilt)
+	\item Zusammenfassung
+	\item Literaturverzeichnis
+\end{enumerate}
+
+\subsection{Kurzfassung (Abstract), Einleitung und Schluss}
+Am Anfang eines wissenschaftlichen Aufsatzes steht immer eine \textbf{Kurzfassung (Abstract)} - eine Inhaltsangabe, worum es in der Arbeit geht. Anhand dieser soll ein Leser entscheiden können, ob es sich lohnt, weiterzulesen\footnote{Sofern ein Leser kein Abonnement für die jeweilige Zeitschrift hat, ist die Kurzfassung das einzige, was er öffentlich lesen kann. Für den Rest muss er den Aufsatz kaufen!}. Im Gegensatz zur Zusammenfassung am Ende ist der Blick hier eher vorausschauend und es geht noch nicht zu sehr ins Detail.
+
+Die \textbf{Einleitung} motiviert das Thema und nennt die Ziele Ihrer Arbeit. Es empfiehlt sich, sie entweder als erstes (um einen Anfang zu schaffen) oder letztes (um eine passende Hinführung zum Thema zu finden) zu schreiben. Sie endet mit einem Überblick, wie die Arbeit aufgebaut ist. Eine gute Orientierung dazu finden Sie in Ihren wissenschaftlichen Quellen an der gleichen Stelle.
+
+Das letzte Kapitel nennt sich niemals "`\textbf{Schluss}"'. Entweder wird die Arbeit mit einem Fazit abgeschlossen, d.~h. ein Ergebnis wird zusammenfassend festgestellt. Oder sie endet mit einer Zusammenfassung, d.~h. es wird noch einmal kurz beschrieben, worum es in der Arbeit geht und was die Ergebnisse sind (an dieser Stelle ausführlicher als in der Kurzfassung am Anfang). Um sich selbst einen Überblick zu verschaffen, kann man die Arbeit als Ganzes durchlesen und sich zu jedem Abschnitt kurz notieren, worum es geht. Damit hat man eine gute Grundlage, um eine Zusammenfassung zu schreiben. Gerne wird eine Zusammenfassung auch noch ergänzt um einen Ausblick. Darin können Sie beurteilen, welche weitere Entwicklung das Thema in der Zukunft nimmt oder wo Sie Anknüpfungspunkte sehen.
+
+Idealerweise ergänzen sich Kurzfassung, Einleitung und Zusammenfassung, so dass ein Leser diese drei Abschnitte lesen kann und damit einen genaueren Eindruck bekommt, was im Aufsatz beschrieben wird. Jemand, der sich einen Überblick über wissenschaftliche Aufsätze zu einem Thema verschafft, liest zuerst die Kurzfassung, anschließend meist diese drei Abschnitte und wenn er die Arbeit dann noch als passend bewertet, den Rest.
+
+\subsection{Hauptteil}
+Wie schon erwähnt sollen in der Seminararbeit die wichtigen Aspekte des Themas zusammengefasst werden. Stark verschachtelte Sätze sollten vermieden werden, damit ein Leser auch ohne Mühe den Text verstehen kann. Fachausdrücke sollten nur bei genauer Kenntnis ihrer Bedeutung verwendet werden.
+
+Manche Sachverhalte lassen sich am Besten mit Abbildungen darstellen. Eine Abbildung darf aber nie für sich stehen, sondern muss immer auch im Text erläutert werden. Abbildung \ref{Fig:Bildbezeichnung} zeigt ein einfaches Bild, das aus einer externen Datei geladen wird. Falls Sie Messreihen oder ähnliches darstellen wollen, kann auch der Einsatz von Tabellen nützlich sein. Diese werden ähnlich wie Abbildungen gesetzt. Ein Beispiel für eine Tabelle findet sich auf Seite~\pageref{tab:dauer}.
+
+\begin{figure}[htbp] %in den eckigen Klammern wird angegeben, wo das Bild erscheinen soll:
+					 %h = here, t = top, b = bottom, p = page (eigene Seite für Bild/er)
+					 %TeX versucht es in dieser Reihenfolge schön hinzukriegen
+					 %wenn das erste gut aussieht, wird das genommen, sonst das zweite usw.
+  \centering
+% Für die Compilierung mit pdflatex wird z.B. ein .jpg/.png/.pdf Bild
+% benötigt. Ein .eps Bild braucht man für die Compilierung mit
+% latex. Wird der Dateiname ohne Dateierweiterung (abbildungen/bild)
+% angegeben wird je nachdem, ob latex oder pdflatex benutzt wird, die
+% entsprechende Datei herausgesucht.
+  \includegraphics[width=0.7\textwidth]{figures/bild1}
+  \caption{Bildunterschrift mit Quellenangabe \cite{ungerer2013parmerasa}}
+  \label{Fig:Bildbezeichnung}
+\end{figure}
+
+Sowohl Abbildungen als auch Tabellen werden mit Nummerierung und kurzer Beschreibung versehen. Die Nummerierung übernimmt \LaTeX automatisch, der kurze erklärende Text wird durch \verb+\caption{Beschreibung}+ hinzugefügt. Dabei ist zu beachten, dass die Beschriftung bei Tabellen über der Tabelle steht und bei Abbildungen unter der Abbildung. Um im Text auf eine Abbildung oder eine Tabelle zu verweisen, erhält das jeweilige Objekt mit \verb+\label{Markierung}+ eine eindeutige Markierung, deren automatisch generierte Nummer mit \verb+\ref{Markierung}+ in den Fließtext eingefügt wird. Dies funktioniert nicht nur bei Abbildungen und Tabellen, sondern auch bei den nummerierten Kapiteln und Abschnitten.
+
+Weiter auflockern können Sie das Geschriebene, indem Sie Aufzählungen verwenden. \LaTeX\ bietet hierfür nummerierte Aufzählungen mit \verb+\begin{enumerate}+ (z.\,B. am Ende von Abschnitt~\ref{hinweise:gliederung}) und unnummerierte mit \verb+\begin{itemize}+ (z.\,B. im Abschnitt~\ref{hinweise:umfang}).
+
+Eine Spezialität von \LaTeX\ ist das Setzen von Formeln. Kurze Formeln innerhalb des Textes werden zwischen \verb+$+-Zeichen gesezt, z.~B. $E=mc^2$. Größere Formeln sollten hingegen abgesetzt werden:
+\begin{equation}
+x_{1/2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\label{eqn:qq}
+\end{equation}
+Diese abgesetzten Formeln können dann auch referenziert werden, wie Gleichung \ref{eqn:qq} zeigt.
+
+
+\subsection{Zitierungen und Literaturverzeichnis}
+
+Wenn Ideen aus anderen Publikationen übernommen oder zusammengefasst werden, müssen diese auch referenziert werden. Die entsprechende Quelle wird mit vollständigem Quellennachweis unter dem Abschnitt \glqq Literaturverzeichnis\grqq\ aufgenommen und die Textstelle mit der Referenz gekennzeichnet. Insbesondere muss für alle nicht selbst gezeichneten Bilder eine Quelle angegeben werden.
+
+        \todo[inline]{Die folgende Zeile löst eine Fehlermeldung \textit{Overfull \textbackslash hbox} aus, d.~h. der Text steht an einer Stelle (beim Wort "`gewünschte"') über den definierten Seitenrand über. In solchen Fällen bleibt nur, etwas umzuformulieren oder mögliche Trennstriche via \textbackslash - einzufügen, damit der Zeilenumbruch klappt und gleichzeitig alles schön aussieht. Sie können auch versuchen, das Paket Microtype zu aktivieren. Damit solche Stellen mit leichter erkennbar sind, wird mit ein schwarzer Balken am Rand jeder \textit{Overfull \textbackslash hbox} angezeigt.}
+        %stellen Sie die \textbackslash documentclass am Anfang des Dokuments von \texttt{final} zu \texttt{draft} um, dann erscheint am Rand bei jeder \textit{Overfull \textbackslash hbox} ein schwarzer Balken.}
+        In \LaTeX werden Referenzen durch \verb+\cite{Quelle}+ gekennzeichnet, wobei \verb+Quelle+ ein selbstgewählter Name ist, der nicht im fertigen Dokument auftaucht und auf die \mbox{gewünschte} Publikation verweist. Die einzelnen Einträge im Literaturverzeichnis verwalten sie am besten mit Bib\TeX. Im Internet können Sie zu nahezu jeder Publikation fertige Bib\TeX-Einträge finden. Beachten Sie jedoch, dass diese oftmals nicht einheitlich formatiert sind oder wichtige Angaben fehlen. Ergänzen und vereinheitlichen Sie, wenn nötig.
+
+        Bei Büchern \todo{Mit todo-Notes (\texttt{\textbackslash todo}) können Sie markieren, wo noch etwas zu tun ist.} sollte mindestens die Autoren, der Titel, die Auflage, der Verlag, der Ort, das Erscheinungsjahr und möglichst die Seitennummer aufgeführt werden~\cite[S. 69]{lamport94latex}, bei Journals oder Tagungsbänden die Autoren, der Titel, der Konferenzname und das Kürzel, das Jahr und die Seitenzahlen. Schwieriger ist es bei technischen Spezifikationen oder Handbüchern, hier fehlen oft wichtige Angaben. Geben Sie hier alles an, was beim Auffinden helfen kann, also Autor, Firma, Titel, Versionsnummer, Veröffentlichungsdatum oder Internetadresse. Insbesondere sollte die Art der Veröffentlichung erwähnt werden, also technischer Bericht, Handbuch, Whitepaper, Diplomarbeit, etc.. Beispiele für ein Journal Paper \cite{ungerer2010merasa} und einen Artikel aus einem Tagungsband \cite{ungerer2013parmerasa} finden Sie im Literaturverzeichnis dieser Vorlage. Sofern Sie etwas aus mehreren Quellen zitieren, können Sie dafür auch Mehrfachzitierung verwenden~\cite{ungerer2010merasa,ungerer2013parmerasa}.\todo{Ein Verzeichnis von todos können Sie mit \textbackslash listof\-todos ausgeben (siehe letzte Seite).}
+
+Verzichten Sie möglichst auf reine Internetquellen, wie Wikipedia-Artikel, Online-Zeitschriften oder Werbematerial von den Herstellern. Trotzdem sind Internetadressen im Literaturverzeichnis hilfreich, müssen aber immer mit einem Abrufdatum versehen werden. Document Object Identifiers (DOIs) sind eindeutige Bezeichnungen für Veröffentlichungen, haben sich aber bisher noch nicht richtig durchgesetzt, als ergänzende Angabe sind sie dennoch hilfreich.
+
+Falls Sie es für nötig erachten, wörtlich aus fremden Arbeiten zu zitieren, so kennzeichnen Sie diese Zitate eindeutig. Längere Zitate bilden einen eigenen Absatz, der mit \verb+\begin{quote}+ begonnen und mit \verb+\cite{Quelle}\end{quote}+ beendet wird. Kurze Zitate werden mittels Anführungszeichen in den Fließtext aufgenommen, direkt gefolgt von der Referenz. In \LaTeX werden deutsche Anführungszeichen durch die Makros \verb+\glqq+ und \verb+\grqq+ realisiert. Achten Sie darauf, dass Sie nach \verb+\grqq+ gegebenenfalls ein geschütztes Leerzeichen (\verb+~+) einfügen müssen.
+
+
+\subsection{Literaturrecherche}
+Die meisten Themen sind so aktuell, dass Sie in der Bibliothek keine oder nur sehr wenige Quellen finden werden. Auf der anderen Seite liefert Ihnen eine normale Google-Suche unzählige Ergebnisse, die keinen wissenschaftlichen Wert haben. Daher finden Sie Ihre Literatur über wissenschaftliche Suchmaschinen. Bewährt hat sich hier vor allem Google Scholar (\url{https://scholar.google.com/}). Es gibt aber auch Alternativen wie z.B. Microsoft Academic Search (\url{http://academic.research.microsoft.com/}).
+
+Da die meisten wissenschaftlichen Aufsätze auf kostenpflichtigen Portalen erscheinen, empfiehlt es sich, die Recherche an einem Rechner in einem CIP-Pool durchzuführen oder sich mit dem VPN der Uni zu verbinden (siehe \url{https://www.rz.uni-augsburg.de/netz/vpn/}), da die Uni Abos für diese Portale abgeschlossen hat. Ansonsten sehen Sie die Suchergebnisse zwar, können aber das dahinter liegende Dokument nicht abrufen.
+
+Die Qualität Ihrer Ergebnisse können Sie an zwei Maßstäben messen: Wo bzw. wie ein Aufsatz erschienen ist und wie oft er zitiert wurde.
+
+Als wo bzw. wie kommen im Bereich der Informatik Bücher, Zeitschriften (Journals), Konferenzen und Workshops in Frage. Diese Reihenfolge spiegelt auch das "`beste"' bis zum "`schlechtesten"' wieder. Für Bücher sind die Anforderungen am höchsten -- es dauert oft Jahre bis zum Druck, sie werden ausführlich bearbeitet und Korrektur gelesen. Ergebnisse, die in Büchern präsentiert werden, stammen daher üblicherweise von abgeschlossenen Projekten o.ä. Ähnlich verhält es sich mit Zeitschriften: Zwischen erster Einreichung bis zum Erscheinen vergeht meist mehr als ein Jahr. Auch hier sind die Anforderungen für die Veröffentlichung hoch. Bei Konferenzen und Workshops vergehen zwischen Einreichung und Vorstellung/Veröffentlichung meist nur ein paar Monate. Da dort ein Vortrag gehalten werden muss, werden sie auch gerne als Diskussionsplattform genutzt. Dabei sind Konferenzen eher die Plattform für Ergebnisse und auf Workshops können auch Ideen diskutiert werden.
+
+Der zweite Maßstab für die Bewertung der Suchergebnisse ist die Anzahl, wie oft ein Aufsatz zitiert wird. In der Ergebnisliste findet man dazu ein Merkmal \textit{Citations} bzw. \textit{Zitiert von}. Wenn es fehlt, wird ein Aufsatz bislang noch gar nicht zitiert. Je öfter ein Aufsatz zitiert wird, umso mehr wird er in der Fachwelt wahrgenommen und umso wichtiger ist er anzusehen. Man sollte diesem Maßstab allerdings nicht blind vertrauen, da ein Aufsatz, der mehrere Jahre alt ist, natürlich öfter zitiert wird als einer, der gerade erst erschienen ist.
+
+Lesen Sie sich die Kurzfassung (Abstract) am Anfang eines Aufsatzes durch, um festzustellen, ob er für Ihr Thema passend ist. Wenn die Kurzfassung vielversprechend klingt, lesen Sie später noch die Einleitung und die Zusammenfassung. Wenn auch diese passen, dürfte Sie auch der weitere Inhalt des Aufsatzes interessieren.
+
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Hinweise für den Vortrag}
+
+Die Dauer des Vortrags beträgt 25 Minuten für Bachelor und 35 Minuten für Master. Eine gute Vorbereitung und Zeitplanung für den Vortrag gehört daher zu den Lernzielen des Seminars. Anschließend sind 5 Minuten (Bachelor) bzw. 10 Minuten (Master) Zeit für eine Diskussion des Themas vorgesehen.
+
+Der Vortrag soll kein Vorlesen der Seminararbeit sein, vielmehr soll er sich auf die Kernpunkte beschränken. Auf Details kann somit teilweise verzichtet werden. Es soll frei gesprochen werden, d.~h. bitte den Vortragstext nicht vorlesen. Das Vorbereiten und Ablesen einzelner Stichpunkte ist aber in Ordnung. Die Folien dienen in erster Linie der visuellen Unterstützung des Gesagten und müssen nicht jedes angesprochene Detail enthalten. Idealerweise verzichten Sie auf Handzettel -- nutzen Sie stattdessen die Punkte auf den Folien zur Orientierung und erzählen dort zu jedem Punkt etwas.
+
+Im Vortrag sollte auf formale Darstellungen weitgehend verzichtet werden. Der Vortrag sollte anschaulich sein (ein Beispiel ist besser als zehn Formeln) und sollte das bearbeitete Thema den Zuhörern nahe bringen. Das Zielpublikum sind die anderen Seminarteilnehmer, d.~h. gewisse Grundlagen können vorausgesetzt werden.
+
+\subsection{Strukturierung}
+Auf der ersten Folie sollte der Titel des Seminars, das Vortragsthema und der Name des Vortragenden angegeben werden.
+Eine Gliederung des Vortrages kann auf der zweiten Folie gezeigt werden.
+Es sollte auf gute Überleitungen zwischen den Folien geachtet werden.
+Die Folien sollen so strukturiert sein, dass der Bezug zum aktuellen Gliederungspunkt nicht verloren geht.
+Auf der letzten Folie sollen die Kernpunkte des Vortrags noch einmal zusammengefasst werden.
+
+\subsection{Folien}
+Die Folien sollten möglichst mit einer Präsentationssoftware (z.B. \LaTeX{} Beamer, Libre/OpenOffice oder PowerPoint) erstellt und auf USB-Stick (möglichst im PDF-Format) zum Vortrag mitgebracht werden. Entsprechende Vorlagen sind via Digicampus herunterladbar. Als Hilfsmittel stehen ein Beamer und ein Rechner mit PowerPoint, LibreOffice und PDF-Programm zur Verfügung. Es wird empfohlen die Darstellung der Folien vor dem Vortrag zu testen.
+
+Generelle Regeln für einen guten Foliensatz sind:
+\begin{itemize}
+	\item Es sollte mindestens Schriftgröße 18 verwendet werden.
+	\item Eine Animation oder eine Verwendung verschiedener Farben ist zur Verdeutlichung von Zusammenhängen und Wirkungsweisen gut geeignet. Aber bitte nicht übertreiben!
+	\item Pro Folie sollten 2 bis 3 Minuten Redezeit einkalkuliert werden.
+	\item Beachten Sie die 7-3 Regel: pro Folie 7 (\textpm{}3) Stichpunkte, pro Stichpunkt 7 (\textpm{}3) Wörter. Jeder Stichpunkt sollte nur aus einer Zeile bestehen.
+	\item Es soll nicht zuviel Information auf eine Folie gepackt werden (keine ganzen Textabschnitte).
+	\item Stichworte/-punkte sind besser als ganze Sätze.
+	\item Bilder mit wenig Text sind besser als viel Text.
+	\item Wenn sich komplizierte Bilder/Tabellen nicht vermeiden lassen, sollten Kopien davon an die Zuhörenden ausgegeben werden.
+	\item Achten Sie darauf, dass insbesondere Bilder und Tabellen so groß sind, dass sie aus einiger Entfernung noch lesbar sind. Auch Zuhörer in der letzten Reihe wollen Ihrem Vortrag folgen können.
+\end{itemize}
+
+\subsection{Vortragsstil}
+Sprechen Sie in kurzen Sätzen. Außerdem sollten Jargon und Fachausdrücke vermieden werden.
+Sichtkontakt zu den Zuhören ist wichtig, d.~h. nicht gegen die Projektionswand sprechen. 
+Gesagtes und auf der Folie Gezeigtes muss inhaltlich zusammenpassen.
+Man sollte Auslassungen im Vortragsskript für den Fall von Zeitmangel einplanen.
+Ein Probevortrag vor Bekannten (oder dem Spiegel) hilft zur Abschätzung der Vortragsdauer, zur Gewinnung größerer Sicherheit und zum Abbau der Nervosität.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Bewertungsschema für das Seminar}
+
+\subsection{Ausarbeitung}
+\begin{description}
+  \item[Inhalt] (30\%)
+    \begin{itemize}
+      \item Wurde das Thema verstanden?
+      \item Wurde alles wesentliche zum Thema erwähnt?
+      \item Wurde eine gute Auswahl getroffen?
+      \item Passt die Gewichtung der einzelnen Teile?
+      \item Wie gut ist die Motivation?
+      \item Wie gut sind die eigenen Schlussfolgerungen?
+    \end{itemize}
+  \item[Aufbereitung] (12\%)
+    \begin{itemize}
+      \item Aufbau und Gliederung
+      \item Verständlichkeit, Lesbarkeit
+      \item Kann der Argumentation leicht gefolgt werden oder gibt es logische Sprünge?
+      \item Stehen einzelne Teile isoliert ohne Verbindung zum Rest da?
+      \item Sind die Grafiken lesbar und helfen beim Verständnis?
+    \end{itemize}
+  \item[Form] (6\%)
+    \begin{itemize}
+      \item Rechtschreibung (weniger als 1 Fehler pro Doppelseite)
+      \item Grammatikfehler
+      \item Copy-and-paste-Fehler
+      \item Wörter, die über das Spaltenende hinausschauen
+      \item Einheitliche Formatierung
+      \item Einhaltung der Formatvorlage
+      \item Sparsamer und einheitlicher Gebrauch von Fett- und Kursivschrift
+      \item Seitanaufbau und Anordnung der Überschriften, Aufzählungen und Bilder
+      \item Umfang
+    \end{itemize}
+\end{description}
+
+\subsection{Literatur}
+\begin{description}
+  \item[Recherche] (4\%)
+    \begin{itemize}
+      \item Wurde genügend Literatur gefunden?
+      \item Wie hoch ist die Qualität der zitierten Literatur?
+      \item Wie schwer war die Literaturrecherche?
+      \item Wurde die Literatur ohne Hilfe des Betreuers gefunden?
+    \end{itemize}
+  \item[Literaturverzeichnis] (4\%)
+    \begin{itemize}
+      \item Sind die Angaben ausführlich und einheitlich?
+      \item bei Büchern: Autoren, Titel, Verlag, Ort, Jahr, ISBN
+      \item bei Tagungsbänden: Autoren, Titel, Konferenzname und Kürzel, Jahr, Seiten
+      \item bei technischen Spezifikationen, Handbüchern, etc.: allgemein soviel 
+    Informationen wie möglich (Autor, Firma, Titel, Versionsnummer, Veröffentlichungsdatum, Veröffentlichungsart, Internetadresse)
+      \item Abrufdatum bei Internetquellen
+    \end{itemize}
+  \item[Korrektes zitieren] (4\%)
+    \begin{itemize}
+      \item Wurden alle Aussagen belegt?
+      \item Haben alle Bilder Quellenangaben?
+      \item Wurden wörtliche Zitate markiert?
+      \item Gibt es Seitenangaben beim Zitieren von Büchern?
+    \end{itemize}
+\end{description}
+
+\subsection{Vortrag}
+\begin{description}
+  \item[Inhalt] (12\%)
+    \begin{itemize}
+      \item Wurde das Thema verstanden?
+      \item Wurde sinnvoll gekürzt und die Kernpunkte erkannt?
+      \item Ist die Darstellung ausreichend?
+      \item Wurden alle Fragen beantwortet?
+    \end{itemize}
+  \item[Aufbereitung] (12\%)
+    \begin{itemize}
+      \item Guter Einstieg und Motivation?
+      \item Anschauliche Darstellung?
+      \item Übersichtliche Folien?
+      \item Passen die Folien zum Vortrag?
+    \end{itemize}
+  \item[Stil] (3\%)
+    \begin{itemize}
+      \item Wurde frei und verständlich gesprochen?
+      \item Wurde das Publikum angesprochen?
+      \item Wurde mit den Folien interagiert?
+	  \item Wurde auf Handzettel (bzw. Notizen im PowerPoint-Präsentationsmodus) verzichtet?
+    \end{itemize}
+  \item[Dauer] (3\%)
+    siehe Tabelle \ref{tab:dauer}
+\end{description}
+
+\begin{table}[htb]
+  \caption{Punkte in Abhängigkeit der Vortragsdauer}
+  \centering
+  \begin{tabular}{c|c|c}
+    Bachelor & Master & Punkte \\
+    \hline
+    bis 13 Minuten & bis 23 Minuten & 0 \\
+    14-17 Minuten & 24-27 Minuten & 1 \\
+    18-21 Minuten & 28-31 Minuten & 2 \\
+    22-25 Minuten & 32-35 Minuten & 3 \\
+    26-29 Minuten & 36-39 Minuten & 2 \\
+    30-33 Minuten & 40-43 Minuten & 1 \\
+    ab 34 Minuten & ab 44 Minuten & 0 \\
+  \end{tabular}
+  \label{tab:dauer}
+\end{table}
+
+\subsection{Zusammenarbeit mit dem Betreuer}
+\begin{description}
+  \item[Insgesamt] (10\%)
+    \begin{itemize}
+      \item Wurde eigenständig gearbeitet?
+	  \item Wurden die Zwischentermine eingehalten?
+	  \item War an den Zwischenergebnissen erkennbar, dass für das Seminar etwas getan wurde?
+      \item Wurde der Betreuer zu oft oder zu selten konsultiert?
+      \item Ist das Ergebnis schlecht, weil der Betreuer zu wenig gefragt wurde?
+      \item Ist das Ergebnis schlecht, weil Anregungen des Betreuers nicht angenommen wurden?
+      \item Gab es Eigeninitiative, über das vom Betreuer gesagte hinaus?
+    \end{itemize}
+\end{description}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Literaturreferenzen anzeigen.
+
+% Zum korrekten Einfuegen der Referenzen muessen Sie das Dokument
+% einmal uebersetzen:
+% $ [pdf]latex vorlage
+% Danach BibTeX:
+% $ bibtex vorlage
+% und zu guter letzt noch zweimal uebersetzen, damit auch alle
+% Referenzen passen:
+% $ [pdf]latex vorlage
+% $ [pdf]latex vorlage
+
+\printbibliography
+
+\listoftodos
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

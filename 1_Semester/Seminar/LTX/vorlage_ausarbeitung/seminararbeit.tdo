@@ -1,0 +1,6 @@
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{Die folgende Zeile l\IeC {\"o}st eine Fehlermeldung \textit {Overfull \textbackslash hbox} aus, d.\nobreakspace {}h. der Text steht an einer Stelle (beim Wort \active@dq \dq@prtct {`}gew\IeC {\"u}nschte\active@dq \dq@prtct {'}) \IeC {\"u}ber den definierten Seitenrand \IeC {\"u}ber. In solchen F\IeC {\"a}llen bleibt nur, etwas umzuformulieren oder m\IeC {\"o}gliche Trennstriche via \textbackslash - einzuf\IeC {\"u}gen, damit der Zeilenumbruch klappt und gleichzeitig alles sch\IeC {\"o}n aussieht. Sie k\IeC {\"o}nnen auch versuchen, das Paket Microtype zu aktivieren. Damit solche Stellen mit leichter erkennbar sind, wird mit ein schwarzer Balken am Rand jeder \textit {Overfull \textbackslash hbox} angezeigt.}{7}{section*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{Mit todo-Notes (\texttt {\textbackslash todo}) k\IeC {\"o}nnen Sie markieren, wo noch etwas zu tun ist.}{8}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{Ein Verzeichnis von todos k\IeC {\"o}nnen Sie mit \textbackslash listof\-todos ausgeben (siehe letzte Seite).}{8}{section*.5}

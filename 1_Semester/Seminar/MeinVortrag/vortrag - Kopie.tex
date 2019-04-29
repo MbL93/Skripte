@@ -1,0 +1,799 @@
+% standardmäßig im 4:3 Format
+% verwende \documentclass[169]{sikslides} für 16:9
+%\documentclass{beamer}
+\documentclass{sikslides}
+\usepackage{pgfpages}
+\setbeameroption{show notes on second screen}
+\graphicspath{{./figures/}}
+
+\title[Speicherkonsistenzmodelle für GPUs]{Speicherkonsistenzmodelle für GPUs}
+\subtitle{Seminar \\Safety-Critical Systems}
+\author{Marc Blickle}
+\date[01.02.2019]{2. Februar 2019}
+
+\begin{document}
+
+\titleframe
+
+
+\begin{frame}
+	\frametitle{Motivation}
+	\begin{itemize}
+		\item Vermehrt datenparallele Entwicklung bei GPU
+\bigskip
+		\item Speicherzugriffe auf Shared Memory müssen abgestimmt sein
+\bigskip
+		\item Bei CPU etabliert
+\bigskip \item GPU-Hersteller hingegen bieten schlechte Transparenz und Info
+\bigskip
+		\item Datenparallele Entwicklung wird erschwert
+	\end{itemize}
+
+\end{frame}
+\note{\newline Seit einem guten Jahrzehnt wird sich vermehrt auf datenparallele Entwicklung bei GPUs konzentriert
+		\newline \newline Parallele Ausführung -> Speicherzugriffe auf Shared-Memory müssen mithilfe eines sogenannten Speicherkonsistenzmodell abgestimmt werden
+\newline \newline Bei CPU etabliert, GPU-Hersteller hingegen bieten schlechte Transparenz und Info
+		\newline \newline Datenparallele Entwicklung wird erschwert
+}
+
+\begin{frame}
+\frametitle{Speicherkonsistenzmodelle für GPUs}
+	    \begin{itemize}
+	\item Was sind etablierte CPU-Speicherkonsistenzmodelle?
+\bigskip
+    \item Wie gut oder schlecht sind sie für den GPU-Gebrauch?
+\bigskip
+	\item Neue Ansätze?
+    \end{itemize}
+\end{frame}
+
+
+% erneutes Bauen notwendig, um Gliederung zu aktualisieren
+\begin{frame}{Gliederung}
+   
+    \tableofcontents[hideallsubsections]
+    	%\tableofcontents[currentsection, subsectionstyle=show/show/hide]
+ 	%\sectionframe	
+	%\subsectionframe
+\end{frame}
+
+
+%\begin{frame}{Motivation}
+%  \frametitle{Motivation}
+%  \begin{itemize}
+%  \item Aufzählungspunkt
+%    \begin{itemize}
+%    \item Eine Ebene tiefer
+%    \item ...
+
+
+%    \end{itemize}
+%  \item Noch ein Punkt
+%  \end{itemize}
+%\end{frame}
+%\sectionframe{Zweiter Teil}
+
+
+%\begin{frame}
+%    \frametitle{Grundlagen}
+%    Text ohne Aufzählung
+%    \vfill
+%    \begin{center}
+%        \Large\textbf{Formatierung wie in normale n \LaTeX-Dokumenten möglich}
+%    \end{center}
+%\end{frame}
+
+
+
+\section{Grundlagen}
+
+\begin{frame}{Gliederung}
+   
+    	\tableofcontents[currentsection, subsectionstyle=show/show/hide]
+ 	%\sectionframe	
+	%\subsectionframe
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Grundlagen}
+  \begin{itemize}
+  \item GPU-Architektur
+\bigskip
+  \item Speicherkonsistenz
+\bigskip
+  \item Speicherkonsistenzmodelle
+  \end{itemize}
+\end{frame}
+
+%%%GPU ARCHITEKTUR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%UNIT
+\begin{frame}
+	\frametitle{GPU Architektur - ein Thread}
+\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/gpumemory1.png}
+  \label{Fig:gpum}
+\end{figure}
+
+\end{frame}
+\note{Ein Thread ist eine einzelne Recheneinheit \newline
+\newline Führt Rechenoperationen aus, in denen sie mit Speicher interagiert \newline
+\newline Tausende Threads können gleichzeitig arbeiten \newline
+}
+
+\begin{frame}
+  \frametitle{GPU Architektur - ein Thread}
+  \begin{itemize}
+  \item Ist eine einzelne Recheneinheit
+\bigskip
+  \item Führt Rechenoperationen aus
+\bigskip
+  \item Interagiert mit Speicher
+\bigskip
+  \item Mehrere tausend Threads 
+
+
+  \end{itemize}
+\end{frame}
+\note{ \newline Ein Thread ist eine einzelne Recheneinheit \newline
+\newline Führt Rechenoperationen aus, in denen sie mit Speicher interagiert \newline
+\newline Tausende Threads können gleichzeitig arbeiten 
+} 
+
+
+%% Block
+
+\begin{frame}
+	\frametitle{GPU Architektur - ein Block}
+\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/gpumemory3.png}
+  \label{Fig:gpum}
+\end{figure}
+
+
+
+\end{frame}
+\note{\newline\newline Mehrere Threads bilden einen Block\newline
+\newline Anzahl Je nach Architektur unterschiedlich \newline
+\newline Bis zu 512 Threads pro Block \newline
+\newline Parallel oder seriell zueinander \newline
+\newline Abhängig von Speichermodell \newline
+\newline Mehr dazu gleich \newline
+\newline Alle Threads im Block teilen sich shared memory \newline
+\newline in ihn wird gelesen und geschrieben. \newline
+\newline Kommunikation über Shared Memory}
+
+
+
+
+\begin{frame}
+  \frametitle{GPU Architektur - ein Block}
+  \begin{itemize}
+  \item Mehrere Threads sind in einem Block zusammengefasst
+\bigskip
+  \item Anzahl unterscheidet sich von Architektur zu Architektur
+\bigskip
+  \item Parallele und oder serielle Ausführung
+\bigskip
+  \item Threads in einem Block teilen Shared Memory
+\bigskip
+  \item Zum Schreiben und Lesen: Über Shared Memory kommunizieren die Threads 
+  \end{itemize}
+\end{frame}
+\note{\newline\newline Mehrere Threads bilden einen Block\newline
+\newline Anzahl Je nach Architektur unterschiedlich \newline
+\newline Bis zu 512 Threads pro Block \newline
+\newline Parallel oder seriell zueinander \newline
+\newline Abhängig von Speichermodell \newline
+\newline Mehr dazu gleich \newline
+\newline Alle Threads im Block teilen sich shared memory \newline
+\newline in ihn wird gelesen und geschrieben. \newline
+\newline Kommunikation über Shared Memory}
+
+
+%%%Giter
+
+\begin{frame}
+	\frametitle{GPU Architektur}
+\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/gpumemory4.png}
+  \label{Fig:gpum}
+\end{figure}
+
+\end{frame}
+\note{ \newline Mehrere Blöcke bilden ein Gitter
+\newline \newline  Global Memory steht gesamten Gitter zur Verfügung
+\newline \newline Einzelne Blöcke und somit auch die Threads greifen auf ihn zu und kommunizieren über ihn
+}
+
+\begin{frame}
+	\frametitle{GPU Architektur}
+	\begin{figure}[htbp] 
+ 	 	\centering
+ 		 \includegraphics[width=0.9\textwidth]{figures/gpumemory.png}
+ 		 \label{Fig:gpum}
+	\end{figure}
+
+\end{frame}
+\note{ \newline Mehrere Blöcke bilden ein Gitter
+\newline \newline  Global Memory steht gesamten Gitter zur Verfügung
+\newline \newline Einzelne Blöcke und somit auch die Threads greifen auf ihn zu und kommunizieren über ihn
+}
+
+
+\begin{frame}
+  \frametitle{GPU Architektur - ein Gitter}
+  \begin{itemize}
+  \item Mehrere Blöcke bilden ein Gitter 
+\bigskip
+    \item Global Memory steht gesamten Gitter zur Verfügung
+\bigskip
+    \item Einzelne Blöcke und somit auch die Threads greifen auf ihn zu und kommunizieren über ihn
+
+
+  \end{itemize}
+\end{frame}
+\note{ \newline Mehrere Blöcke bilden ein Gitter
+\newline \newline  Global Memory steht gesamten Gitter zur Verfügung
+\newline \newline Einzelne Blöcke und somit auch die Threads greifen auf ihn zu und kommunizieren über ihn
+}
+
+
+\begin{frame}
+  \frametitle{GPU Architektur }
+	\begin{itemize}
+		\item Programmierer entscheidet über Thread- und Blockzahl
+\bigskip
+		\item Obergrenze allerdings von GPU vorgegeben
+\bigskip
+		\item Wichtig dabei: Threads müssen Speicherzugriffregeln einhalten
+	\end{itemize}
+\end{frame}
+\note{
+\newline  \newline   Wie Units, Blöcke und Gitter gebildet werden, hängt von der laufenden Software ab
+\newline  \newline  Verschiedene GPUs, verschiedene architekturen, verschiedene Obergrenzen
+\newline  \newline  Bei Softwareprogrammierung zu beachten:
+\newline  \newline  Threads Speicherzugriffsregeln einhalten
+\newline  \newline es braucht Regelung, wie Threads auf gleichen Speicher zugreifen
+\newline  \newline  ohne sich zu behindern
+\newline  \newline  Es muss Speicherkonsistenz geschaffen werden
+}
+
+
+
+%%%%%%%%%%%%% ENDE ARCHITEKTUR %%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SPEICHERKONSISTENZ %%%%%%
+\begin{frame}
+	\frametitle{Speicherkonsistenz}
+Speicherkonsistenz und Speicherkonsistenzmodelle
+\end{frame}
+
+\begin{frame}
+	\frametitle{Speicherkonsistenz}
+	\begin{itemize}
+		\item Threads greifen also gemeinsam auf Shared Memory zu
+\bigskip
+		\item Was passiert, wenn mehrere Threads auf selbe Speicheradresse zugreifen wollen?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Speicherkonsistenz}
+	\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/problem1.png}
+  \label{Fig:gpum}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Speicherkonsistenz}
+	\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/problem2.png}
+  \label{Fig:gpum}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Speicherkonsistenz}
+	\begin{itemize}
+		\item Speicherdaten im System sollen einheitlich und widerspruchfrei sein
+\bigskip
+		\item Es werden Anforderungen geschaffen, die erfüllt werden müssen um dies zu erreichen
+\bigskip
+		\item Diese bestimmen, was eine Operation sehen und machen darf
+\bigskip
+		\item Verschiedene Architekturen bieten verschiedene Anforderungen: verschiedene Speicherkonsistenzmodelle
+	\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SPEICHERKONSISTENZMODELLE
+
+
+
+
+\begin{frame}
+	\frametitle{Speicherkonsistenzmodelle}
+	\begin{itemize}
+		\item Modell stellt Vertrag zwischen Software und Speicherhardware dar
+\bigskip
+		\item Regelwerk, wie das System Speicheroperationen verarbeitet
+\bigskip
+		\item Bei Einhaltung werden Ergebnisse zugesichert und konsistente Ziele erreicht
+\bigskip
+		\item Es herrscht dann Speicherkonsistenz
+\bigskip
+		\item Verschiedene Modelle -  verschiedene Strukturen - verschiedene Zwecke
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Speicherkonsistenzmodelle}
+	Welches Modell ist nun gut für eine GPU?
+\end{frame}
+
+\begin{frame}
+	\frametitle{Welches Modell ist nun gut für eine GPU?}
+	\begin{itemize}
+		\item GPU mehr Recheneinheiten als CPU
+\bigskip
+		\item GPU verfügt über tieferen Aufbau
+\bigskip
+		\item Mehr Operationen, mehr parallele Ausführungen
+	\end{itemize}
+	\bigskip
+	-> GPU braucht Schnelligkeit und Performance, viele Berechnungen
+	\newline 
+\bigskip
+-> Speicher soll geregelt beschrieben und gelesen werden
+\newline
+\bigskip
+-> Aber Threads sollen dies schnell und ungehindert tun
+\end{frame}
+
+\note{\newline Folgende Modelle wurden für CPUS konzipiert
+\newline \newline Deshalb vergleich mit CPU
+\newline \newline Tieferer, hierarchischer aufbau
+}
+
+
+
+\section{Untersuchte Speicherkonsistenzmodelle}
+\begin{frame}{Gliederung}
+   
+    	\tableofcontents[currentsection, subsectionstyle=show/show/hide]
+ 	%\sectionframe	
+	%\subsectionframe
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Untersuchte Speicherkonsistenzmodelle}
+  \begin{itemize}
+  \item Sequential Consistency Model
+\bigskip
+  \item Weak Consistency Model
+\bigskip
+  \item Release Consistency Model
+  \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				SEQUENTIELL
+\begin{frame}
+	\frametitle{Sequential Consistency Model}
+Sequential Consistency Model
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Sequential Consistency Model}
+Abstrakt:
+	\begin{itemize}
+		\item Alle Threads über Switch an gemeinsamen Speicher gekoppelt
+\bigskip
+		\item Switch gibt Speicher für bestimmten Prozessor frei
+\bigskip
+		\item Dieser darf nun operieren, meldet wenn fertig
+\bigskip
+		\item Switch sortiert also die Lese und Schreiboperationen und stellt sequentielle Reihenfolge her
+\bigskip
+		\item Unabhängig davon, wann sie eingereicht werden, sortiert Switch sinnvoll 
+\bigskip
+		\item Alle Prozessoren sehen somit dieselbe Reihenfolge
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Sequential Consistency Model}
+\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/seqq.PNG}
+  \label{Fig:gpum}
+\end{figure}
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+	\frametitle{Sequential Consistency Model}
+	Konsistenz resultiert aus Programm, wenn:
+\bigskip
+	\begin{itemize}
+		\item Jeder Prozessor Speicheranfragen in der Reihenfolge einreicht, die Programm vorgibt
+\bigskip
+		\item Speicheranfragen jedes Prozessors werden von einer Schlange verarbeitet, die Anfragen sortiert
+	\end{itemize}
+\bigskip Globale Reihenfolge für alle eingereichten Operationen!
+\end{frame}
+\note{Ein Programm, das unter diesem Regelwerk agiert, stellt eine Konsistenz sicher, wenn:
+		 Jeder Prozessor Speicheranfragen in der Reihenfolge einreicht, die ihm vom Programm vorgegeben wurden
+		 Speicheranfragen jedes einzelnen Prozessors von einer einzigen Schlange verarbeitet werden, die die Anfragen sortiert
+
+\bigskip Für alle eingereichten Operationen wird eine globale Reihenfolge gewählt, die eingehalten werden muss.}
+}
+
+\begin{frame}
+	\frametitle{Sequential Consistency Model}
+\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/SeqModell1.PNG}
+  \label{Fig:gpum}
+\end{figure}
+\end{frame}
+\note{Wie im folgenden Bild 5 zu sehen, soll von Prozessor 3 ein Wert erfasst werden, der
+noch gar nicht existiert. Dies symbolisiert eine gewisse Flexibilit¨at, auch wenn dies in
+einem realen System nicht angewandt werden k¨onnte. Die Operation R(y)2 versucht hier
+einen Wert zu lesen, der noch gar nicht geschrieben wurde. Die Flexibilit¨at wird insofern
+umgesetzt, dass das System diese Operation zeitlich nach der Writeoperation(y) setzen
+wuerde.}
+
+
+
+
+\begin{frame}
+	\frametitle{Sequential Consistency Model}
+	
+	\begin{itemize}
+		\item Ablauf ähnelt stark der Denkweise eines Programmierers\bigskip
+		\item Leider ist dieser nicht parallel\bigskip
+		\item Modell passt nicht wirklich zu Multiprozessorsystem\bigskip
+		\item Sequentielle Abfolge verlangsamt die Ausführung\bigskip
+		\item Je mehr Prozessoren, desto schlechter für GPU\bigskip
+		\item Prozessoren müssen immer aufeinander warten
+	\end{itemize}
+\bigskip
+\end{frame}
+\note{gleichzeitig nach und vorteil}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		 		SCHWACH
+\begin{frame}
+	\frametitle{Weak Consistency Model}
+Schwaches Speicherkonsistenzmodell
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Weak Consistency Model}
+	\begin{itemize}
+		\item Zu dem Zweck entwickelt, Speicherlatenz zu verringern \bigskip
+		\item Weiterentwicklung aus sequentiellem Modell \bigskip
+		\item Sequentielle Ordnung wird aufgegeben \bigskip
+		\item Leistungssteigerung von 40\% \bigskip
+		\item Entwickler muss die Speicheroperationen genau anpassen
+	\end{itemize}
+\end{frame}
+\note{\newline Zweck: Speicherlatenz verringern (Zeit zischen Anfrage und Erhalt des Wertes vom Prozessor)
+\newline \newline Sequentielles Modell so weiterentwickelt, dass zeitweise inkonsistente Modi möglich sind
+\newline \newline  die sequentielle Ordnung wird zunächst aufgegeben
+\newline \newline  40\% mehr Leistung
+\newline \newline Softwareentwickler muss die Speicheroperationen genau anpassen
+\newline \newline Wir werden gleich noch sehen wieso
+}
+
+\begin{frame}
+	\frametitle{Weak Consistency Model}
+	\begin{itemize}
+		\item Datenoperationen: \bigskip
+		\begin{itemize}
+			\item Werte werden aus Speicher gelesen oder geschrieben \bigskip
+			\item Andere Prozessoren können nicht immer die bereits errechneten Werte sehen \bigskip
+		\end{itemize}
+		\item Deshalb Synchronisationsoperationen: \bigskip
+			\begin{itemize}
+			\item Jeder Prozessor kann diese auslösen \bigskip
+			\item Keine neuen Operationen dürfen dann begonnen und laufende müssen abgeschlossen werden \bigskip
+			\item Synchronisation ist auch Neuanordnung von laufenden Operationen \bigskip
+			\item Optimale Reihenfolge zu generieren und Performance gesteigert
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+\note{\newline
+
+}
+
+
+\begin{frame}
+	\frametitle{Weak Consistency Model}
+ Schwache Konsistenz ist gegeben, wenn: \bigskip
+	\begin{itemize}
+		\item Alle Prozessoren sehen alle Synchronisationsoperation stets in gleicher seq. Reihenfolge \bigskip
+		\item Alle anderen Operation können in beliebiger Reihenfolge gesehen werden \bigskip
+		\item Wenn die Synchronisationsoperationen untereinander sequentiell konsistent sind
+	\end{itemize}
+\end{frame}
+\note{\newline Um diese Bedingungen realisieren zukönnen, ist jede Recheneinheit dazu in der Lage, 2 Arten von Operationen auszuführen
+\newline \newline Gewöhnliche Datenoperationen
+\newline \newline Synchronisationsoperationen
+
+}
+
+
+
+\begin{frame}
+	\frametitle{Weak Consistency Model}
+\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/weeeea.png}
+  \label{Fig:weak}
+\end{figure}
+
+\end{frame}
+\note{ \newline Jeder Prozess kann selber auf Memory zugreifen, 
+\newline \newline  Parallel zu den anderen Prozessen
+\newline \newline Zwei und Drei Linien: Operation muss abgeschlossen werden, bevor nächste folgen kann
+\newline \newline Betrifft ausschließlich Synchronisationsoperationen
+\newline \newline Read und Read sind unabhängig voneinander
+\newline \newline Gestrichelt: Darf alles parallel ablaufen, außer es betrifft dieselbe Speicheradresse
+\newline \newline Führt dazu, dass die Synchronisationsoperationen sequentiell sein müssen, die Datenoperationen aber freier sind
+\newline \newline Nächste Folie zeigt nochmal die Auflistung von vorhin
+}
+
+
+
+%%% EVTL BEISPIEL ZEIGEN
+
+\begin{frame}
+	\frametitle{Weak Consistency Model}
+Vorteile:
+	\begin{itemize}
+		\item Einzelne Threads können sich in beliebiger Reihenfolge Zugriff verschaffen
+		\item Müssen nicht auf andere Prozesse warten
+		\item Speicherlatenz wird verringert, Performance gesteigert
+	\end{itemize}
+\bigskip
+Nachteile:
+	\begin{itemize}
+		\item Aufwändigere Programmierung, umfangreichere Regeln
+		\item Fehleranfälliger, gefährlich bei kritischen Operationen!
+		\item Bei zuviel Synchronisation kann Performancegewinn zunichte gemacht werden
+	\end{itemize}
+\end{frame}
+\note{
+\newline Vorteile
+\newline \newline Einzelne Threads können sich in beliebiger Reihenfolge Zugriff verschaffen
+\newline \newline Müssen nicht auf andere Prozesse warten
+\newline \newline Speicherlatenz wird verringert, Performance gesteigert bis 60\%
+\newline Nachteile
+\newline \newline Aufwändigere Programmierung, umfangreichere Regeln
+\newline \newline Fehleranfälliger, gefährlich bei kritischen Operationen!
+\newline \newline Bei zuviel Synchronisation kann Performancegewinn zunichte gemacht werden
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Release
+\begin{frame}
+	\frametitle{Release Consistency Model}
+Release Consistency Model
+\end{frame}
+
+\begin{frame}
+	\frametitle{Release Consistency Model}
+	\begin{itemize}
+		\item Weiterentwicklung des schwachen Modells
+		\item Sychronisationsoperation wird weiter unterteilt
+	\end{itemize}
+	\bigskip Zweck: 
+\newline Synchronisationsoperationen sollen nicht mehr warten müssen 
+\newline Zugriff auf selbe Adresse ist möglich
+\end{frame}
+
+\begin{frame}
+	\frametitle{Release Consistency Model}
+Aquire:
+	\begin{itemize}
+
+		\item Überprüft nur, ob alle Schreiboperationen auf den gemeinsamen Dateien fertig
+		\item Falls ja, erhält der 'aquire'-ausführende Prozessor Zugriff
+		\item Funktion zum Anfragen von Berechtigungen
+\bigskip
+	\end{itemize}
+Release:
+\begin{itemize}
+
+		\item Prozessor kann Schreiboperationen zugänglich machen
+		\item Muss allerdings noch nicht mit schreiben fertig sein
+		\item Funktion zum Gewähren von Berechtigungen
+
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Release Consistency Model}
+\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/compare.png}
+  \label{Fig:weak}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Release Consistency Model}
+Release Consistency ist sichergestellt, wenn:
+	\begin{itemize}
+\bigskip
+		\item Alle Schreiboperationen von A von B gesehen werden, nachdem A sie released hat und bevor B sie aquired hat \bigskip
+		\item Alle 'aquire'-Operationen durchlaufen sind, bevor geschrieben oder gelesen wird \bigskip
+		\item Alle Schreib- oder Leseoperationen durchlaufen sind, bevor 'release' startet 
+
+	\end{itemize}
+
+
+\end{frame}
+\note{\newline \newline Release Consistency ist sicher gestellt wenn 
+\newline \newline Alle Schreiboperationen von A von B gesehen werden, nachdem A sie released hat und bevor B sie aquired hat
+		\newline \newline Alle 'aquire'-Operationen durchlaufen sind, bevor geschrieben oder gelesen wird 
+		\newline \newline Alle Schreib- oder Leseoperationen durchlaufen sind, bevor 'release' startet
+\newline \newline Die nächste Abbildung verdeutlicht das
+} 
+
+
+\begin{frame}
+	\frametitle{Release Consistency Model}
+\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/rc.png}
+  \label{Fig:weak}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Release Consistency Model}
+	\begin{itemize}
+
+		\item Release muss auf vorangegange Operationen warten \bigskip 
+		\item Folgende warten aber nicht auf Fertigstellung von Release \bigskip
+		\item Aquire muss nicht auf vorangegangene Operationen warten
+
+
+		
+
+	\end{itemize}
+
+
+\end{frame}
+\note{\newline \newline Ebenso muss ’aquire’ nicht auf vorangegangene Operationen warten, weil
+es keine Rechte f¨ur das Lesen oder Beschreiben vorangegangener Speicheroperationen
+vergeben muss.
+} 
+
+\begin{frame}
+	\frametitle{Release Consistency}
+	\begin{itemize}
+
+		\item Release muss auf vorangegange Operationen warten \bigskip
+		\item Folgende warten aber nicht auf Fertigstellung von Release \bigskip
+		\item Das Ergebnis sind mehr Flexibilität und Schnelligkeit zwischen ’acquire’ und ’release’ \bigskip
+		\item Operationen überlappbar \bigskip
+		\item Es gibt insgesamt mehr Operationen  \bigskip
+		\item Mehr Operationen müssen ausgeführt und geplant werden 
+
+		
+
+	\end{itemize}
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+\section{Gegenüberstellung}
+\begin{frame}{Gliederung}
+   
+    	\tableofcontents[currentsection, subsectionstyle=show/show/hide]
+ 	%\sectionframe	
+	%\subsectionframe
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gegenüberstellung}
+\begin{figure}[htbp] 
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/vergleich.png}
+  \label{Fig:vg}
+\end{figure}
+
+\end{frame}
+
+\section{Andere Ansätze}
+
+\begin{frame}{Gliederung}
+   
+    	\tableofcontents[currentsection, subsectionstyle=show/show/hide]
+ 	%\sectionframe	
+	%\subsectionframe
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{CUDA und OpenCL}
+		\begin{itemize}
+
+		\item GPUPU Programmiermodelle \bigskip
+		\item Fokus auf Optimierung datenparalleler Entwicklung \bigskip
+		\item Mehrere Threads sollen auf dieselbe Speicheradresse zugreifen können \bigskip
+		\item CUDA basiert auf Schwachem Konsistenzmodell \bigskip
+		\item OpenCL basiert auf RC-Modell \bigskip
+		\item Bieten Framework, um diese Zugriffe für den Programmierer zu vereinfachen \bigskip
+		\item OpenCL über Api-Zugriffe, CUDA über C-Entwicklung
+
+\bigksip
+\item Heute gängige implementierte Form zur Speicherverwaltung
+
+	\end{itemize}
+\end{frame}
+
+\section{Fazit}
+\begin{frame}{Gliederung}
+   
+    	\tableofcontents[currentsection, subsectionstyle=show/show/hide]
+ 	%\sectionframe	
+	%\subsectionframe
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fazit}
+\begin{itemize}
+
+		\item Es gibt viele Modelle, die unterschiedliche Zwecke erfüllen \bigskip
+		\item Gut für GPUs: Modelle, die auf Performance und Datenparallelität ausgerichtet sind \bigskip
+		\item CUDA und OpenCL bieten Framework und optimierte Modelle  \bigskip
+		\item Bauen auf den vorgestellten Modellen auf \bigskip
+		\item Je nach Bedürfnis CUDA oder OpenCL verwenden
+
+
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	
+Vielen Dank für Ihre Aufmerksamkeit!
+\end{frame}
+
+
+\end{document}
+

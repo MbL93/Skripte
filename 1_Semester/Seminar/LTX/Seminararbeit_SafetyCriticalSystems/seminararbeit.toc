@@ -1,0 +1,25 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Grundlagen}{4}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Multicoreprozessoren und Shared-Memory}{4}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Speicherkonsistenz}{5}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Speicherkonsistenzmodelle}{7}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Klassische Speicherkonsistenzmodelle}{7}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1}Sequential Consistency Model}{7}{subsubsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.2}Weak Consistency Model}{9}{subsubsection.3.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.3}Release Consistency Model}{12}{subsubsection.3.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Herangehensweise f\IeC {\"u}r GPUs}{14}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Zusammenfassung und Fazit}{17}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Literatur}{18}{section.5}

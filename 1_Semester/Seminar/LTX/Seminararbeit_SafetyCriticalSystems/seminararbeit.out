@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{Einleitung}{}% 1
+\BOOKMARK [1][-]{section.2}{Grundlagen}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Multicoreprozessoren und Shared-Memory}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Speicherkonsistenz}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Speicherkonsistenzmodelle}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Klassische Speicherkonsistenzmodelle}{section.3}% 6
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Sequential Consistency Model}{subsection.3.1}% 7
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Weak Consistency Model}{subsection.3.1}% 8
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Release Consistency Model}{subsection.3.1}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Herangehensweise f\374r GPUs}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Zusammenfassung und Fazit}{}% 11
+\BOOKMARK [1][-]{section.5}{Literatur}{}% 12

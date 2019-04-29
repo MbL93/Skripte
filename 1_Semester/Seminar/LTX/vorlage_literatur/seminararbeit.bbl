@@ -1,0 +1,108 @@
+\begin{thebibliography}{10}
+
+\bibitem{designingmcm}
+S.~V. Adve.
+\newblock Designing memory consistency models for shared-memory
+  multiprocessors.
+\newblock {\em University of Wisconsin-Madison}, Dezember 1993.
+
+\bibitem{smcmtutorial}
+S.~V. Adve and K.~Gharachorloo.
+\newblock Shared memory consistency models.
+\newblock {\em Digital Equipment Corporation}, December 1996.
+
+\bibitem{optimizingmapreduce}
+L.~Chen and G.~Agrawal.
+\newblock Optimizing mapreduce for gpus with effective shared memory usage.
+\newblock {\em The Ohio State University , Department of Computer Science and
+  Engineering}, June 2012.
+
+\bibitem{mcm3}
+K.~Gharachorloo.
+\newblock Memory consistency models for shared-memory multiprocessors.
+\newblock {\em Stanford University, Departments of Electrical Engineering and
+  Computer Science}, December 1995.
+
+\bibitem{cmc4}
+R.~Gogia, P.~Chhabra, and R.~Kumari.
+\newblock Consistency models in distributed shared memory systems.
+\newblock {\em Dronacharya College Of Engineering}, September 2014.
+
+\bibitem{msssm}
+M.~D. Hill.
+\newblock Multiprocessors should support simple memory-consistency models.
+\newblock {\em University of Wisconsin, Madison}, 1998.
+
+\bibitem{exploit}
+B.~Jang, P.~Mistry, D.~Schaa, and D.~Kaeli.
+\newblock Exploiting memory access patterns to improve memory performance in
+  data-parallel architectures.
+\newblock 2011.
+
+\bibitem{gpuhp}
+V.~V. Kindratenko, J.~J. Enos, G.~Shi, M.~T. Showerman, G.~W. Arnold, J.~E.
+  Stone, J.~C. Phillips, and W.~mei Hwu.
+\newblock Gpu clusters for high-performance computing.
+\newblock {\em University of Illinois}, 2009.
+
+\bibitem{gpuhp2}
+K.~S. Lee.
+\newblock Characterization and exploitation of gpu memory systems.
+\newblock {\em Virginia Polytechnic Institute and State University}, 2009.
+
+\bibitem{mcm5}
+D.~Mosberger.
+\newblock Memory consistency models.
+\newblock {\em Department of Computer Science - The University of Arizona}.
+
+\bibitem{spk}
+B.~Ramm.
+\newblock Speicherkonsistenz.
+\newblock 2002.
+
+\bibitem{gcc}
+D.~S. Rieber.
+\newblock Gpu concurrency and consistency.
+\newblock {\em Universitaet Heidelberg}, 2016.
+
+\bibitem{ocofwmcm}
+M.~Senftleben.
+\newblock Operational characterization of weak memory consistency models.
+\newblock {\em Department of Computer Science - University of Kaiserslautern},
+  2013.
+
+\bibitem{mcm}
+A.~Sharma, D.~Basora, and A.~Sharma.
+\newblock Memory consistency models.
+\newblock {\em Dronacharya College of Engineering, International Journal of
+  Enhanced Research in Management and Computer Applications}, September 2013.
+
+\bibitem{eesmog}
+A.~Singh, S.~Aga, and S.~Narayanasamy.
+\newblock Efficiently enforcing strong memory ordering in gpus.
+\newblock {\em University of Michigan, Department of Computer Science and
+  Engineering}, June 2012.
+
+\bibitem{mcm2}
+J.~Skeppstedt.
+\newblock Memory consistency models.
+\newblock {\em Dronacharya College of Engineering}, 2017.
+
+\bibitem{modelsforgpu}
+T.~Sorensen.
+\newblock Towards shared memory consistency models for gpus.
+\newblock {\em The University of Utah, Digital Equipment Corporation}, March
+  2013.
+
+\bibitem{unified}
+R.~C. STEINKE and G.~J. NUTT.
+\newblock A unified theory of shared memory consistency.
+\newblock {\em University of Colorado at Boulder, Department of Computer
+  Science and Engineering}, September 2004.
+
+\bibitem{acmcm}
+J.~Wickerson, M.~Batty, T.~Sorensen, and G.~A. Constantinides.
+\newblock Automatically comparing memory consistency models.
+\newblock {\em Imperial College London, University of Kent}, November 2016.
+
+\end{thebibliography}

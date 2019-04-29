@@ -1,0 +1,32 @@
+\documentclass{standalone}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+
+\usepackage{calc}
+
+
+\begin{document}
+
+
+\tikzstyle{vertex}=[circle,draw,thick,minimum size=10pt,inner sep=0pt,fill=white]
+\tikzstyle{label}=[circle,minimum size=20,inner sep=0pt]
+
+
+\begin{tikzpicture}[font=\footnotesize,thick]
+  \draw (0, 0) circle [radius=3];
+
+  \node [label] at (90:3.7) {$0.0$};
+  \draw (90:3) ++(90:-5pt) -- ($ (90:3) + (90:5pt) $);
+
+  \foreach \pt [evaluate=\pt as \ang using {- \pt * 360 + 90}] in {0.03, 0.13, 0.2, 0.27, 0.39, 0.42, 0.47, 0.62, 0.75, 0.89} {
+    \node (\pt) [vertex] at (\ang:3) {};
+    \node [label] at (\ang:3.7) {$\pt$};
+    \draw (\ang:3) ++(\ang:-5pt) -- ($ (\ang:3) + (\ang:5pt) $);
+  }
+\end{tikzpicture}
+
+
+\end{document}

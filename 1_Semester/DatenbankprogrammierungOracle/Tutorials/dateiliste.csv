@@ -1,0 +1,19 @@
+Dateiname;Größe;Ersteller;Datum;Name;Beschreibung;Pfad
+01_ora-architektur_tablespace.sql;1433;"PD Dr. Markus Endres";"2018-10-25 15:38:45";01_ora-architektur_tablesapace.sql;;/01_ora-architektur_tablespace.sql
+02_ora-systemtabellen.sql;804;"PD Dr. Markus Endres";"2018-10-25 15:39:05";02_ora-systemtabellen.sql;;/02_ora-systemtabellen.sql
+03_ora-zugriffsrechte.sql;3749;"PD Dr. Markus Endres";"2018-11-08 15:45:15";03_ora-zugriffsrechte.sql;;/03_ora-zugriffsrechte.sql
+04_ora-er2sql.sql;2707;"PD Dr. Markus Endres";"2018-12-05 06:18:30";04_ora-er2sql.sql;;/04_ora-er2sql.sql
+05a_ora-sql_SQL-DDL-Teil1.sql;1234;"PD Dr. Markus Endres";"2018-12-06 17:04:50";05a_ora-sql_SQL-DDL-Teil1.sql;;/05a_ora-sql_SQL-DDL-Teil1.sql
+05b_ora-sql_SQL-DDL-Teil1-identity-column.sql;1722;"PD Dr. Markus Endres";"2018-12-06 17:05:41";05b_ora-sql_SQL-DDL-Teil1-identity-column.sql;;/05b_ora-sql_SQL-DDL-Teil1-identity-column.sql
+05c_ora-sql_NestedTables-Teil2.sql;1869;"PD Dr. Markus Endres";"2018-12-06 17:05:56";05c_ora-sql_NestedTables-Teil2.sql;;/05c_ora-sql_NestedTables-Teil2.sql
+05d_ora-sql_SQL-DML-Teil3.sql;1907;"PD Dr. Markus Endres";"2018-12-17 07:44:38";05d_ora-sql_SQL-DML-Teil3.sql;;/05d_ora-sql_SQL-DML-Teil3.sql
+05e_ora-sql_Funktionen-Teil4.sql;5568;"PD Dr. Markus Endres";"2018-12-17 07:45:02";05e_ora-sql_Funktionen-Teil4.sql;;/05e_ora-sql_Funktionen-Teil4.sql
+06_ora-baeume_ConnectBy.sql;4264;"PD Dr. Markus Endres";"2019-01-10 15:23:46";06_ora-baeume_ConnectBy.sql;;/06_ora-baeume_ConnectBy.sql
+06_ora-baeume_NestedSets.sql;5003;"PD Dr. Markus Endres";"2019-01-10 15:24:16";06_ora-baeume_NestedSets.sql;;/06_ora-baeume_NestedSets.sql
+07_ora-plsql-java_PLSQL-1.sql;1576;"PD Dr. Markus Endres";"2019-01-17 15:45:55";07_ora-plsql-java_PLSQL-1.sql;;/07_ora-plsql-java_PLSQL-1.sql
+07_ora-plsql-java_PLSQL-2.sql;4543;"PD Dr. Markus Endres";"2019-01-24 17:45:58";07_ora-plsql-java_PLSQL-2.sql;;/07_ora-plsql-java_PLSQL-2.sql
+07_ora-plsql-java_PLSQL-3.sql;358;"PD Dr. Markus Endres";"2019-01-24 17:46:15";07_ora-plsql-java_PLSQL-3.sql;;/07_ora-plsql-java_PLSQL-3.sql
+07_ora-plsql-java_PLSQL-4.sql;1444;"PD Dr. Markus Endres";"2019-01-24 17:46:27";07_ora-plsql-java_PLSQL-4.sql;;/07_ora-plsql-java_PLSQL-4.sql
+07_ora-plsql-java_PLSQL-5_Trigger.sql;589;"PD Dr. Markus Endres";"2019-01-24 17:47:05";07_ora-plsql-java_PLSQL-5_Trigger.sql;;/07_ora-plsql-java_PLSQL-5_Trigger.sql
+Appendix_C_SQLSyntax_doc.pdf;349345;"PD Dr. Markus Endres";"2018-10-18 06:13:24";"Oracle SQL Syntax";;/Appendix_C_SQLSyntax_doc.pdf
+sqldeveloper-sqlpp.pdf;784257;"PD Dr. Markus Endres";"2018-10-18 06:58:14";"Using SQL Developer";;/sqldeveloper-sqlpp.pdf

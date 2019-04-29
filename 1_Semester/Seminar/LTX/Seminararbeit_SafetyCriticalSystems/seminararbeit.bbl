@@ -1,0 +1,852 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{denovor}{misc}{}
+      \name{author}{9}{}{%
+        {{hash=9a8ebc2e7cc5ca21d60033c5313d8da9}{%
+           family={Adve},
+           familyi={A\bibinitperiod},
+           given={S.\bibnamedelimi V.},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=a9d4d149d207cd46a1553fbc20c8ed8c}{%
+           family={Adve},
+           familyi={A\bibinitperiod},
+           given={V.\bibnamedelimi S.},
+           giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=619049426254b87c1f4832cfa9914a20}{%
+           family={Choi},
+           familyi={C\bibinitperiod}}}%
+        {{hash=361b15eec0704b3bd7384fa91bffc8d9}{%
+           family={Komuravelli},
+           familyi={K\bibinitperiod}}}%
+        {{hash=8d0e0480a121582faede5ecb05560eb7}{%
+           family={Sung},
+           familyi={S\bibinitperiod}}}%
+        {{hash=216e574b28179e1075f11d66db5e483c}{%
+           family={Smolinski},
+           familyi={S\bibinitperiod}}}%
+        {{hash=5a31216cccff4d203bc28aad770427c4}{%
+           family={Honarmand},
+           familyi={H\bibinitperiod}}}%
+        {{hash=24770abfae60fdd99ec0cd4dfc3c1704}{%
+           family={Carter},
+           familyi={C\bibinitperiod}}}%
+        {{hash=13299a0306e85af50b824885329b1883}{%
+           family={Chou},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{39957627c6b8e11d938b0a39fe0feca4}
+      \strng{fullhash}{d58a3a01ab8dce769e886114cdc2657b}
+      \strng{bibnamehash}{39957627c6b8e11d938b0a39fe0feca4}
+      \strng{authorbibnamehash}{39957627c6b8e11d938b0a39fe0feca4}
+      \strng{authornamehash}{39957627c6b8e11d938b0a39fe0feca4}
+      \strng{authorfullhash}{d58a3a01ab8dce769e886114cdc2657b}
+      \field{labelalpha}{Adv+11}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{International Conference on Parallel Architectures and Compilation Techniques}
+      \field{title}{DeNovo: Rethinking the Memory Hierarchy for Disciplined Parallelism}
+      \field{year}{2011}
+      \true{nocite}
+    \endentry
+    \entry{designingmcm}{report}{}
+      \name{author}{1}{}{%
+        {{hash=627cb129a51d4528454f6379c34746be}{%
+           family={Adve},
+           familyi={A\bibinitperiod},
+           given={Sarita\bibnamedelima V.},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Wisconsin-Madison}%
+      }
+      \strng{namehash}{627cb129a51d4528454f6379c34746be}
+      \strng{fullhash}{627cb129a51d4528454f6379c34746be}
+      \strng{bibnamehash}{627cb129a51d4528454f6379c34746be}
+      \strng{authorbibnamehash}{627cb129a51d4528454f6379c34746be}
+      \strng{authornamehash}{627cb129a51d4528454f6379c34746be}
+      \strng{authorfullhash}{627cb129a51d4528454f6379c34746be}
+      \field{labelalpha}{Adv93}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Designing Memory Consistency Models For Shared-Memory Multiprocessors}
+      \field{type}{techreport}
+      \field{year}{1993}
+      \true{nocite}
+    \endentry
+    \entry{smcmtutorial}{article}{}
+      \name{author}{2}{}{%
+        {{hash=627cb129a51d4528454f6379c34746be}{%
+           family={Adve},
+           familyi={A\bibinitperiod},
+           given={Sarita\bibnamedelima V.},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=e762cb57ed6d194410566c60ea80d867}{%
+           family={Gharachorloo},
+           familyi={G\bibinitperiod},
+           given={Kourosh},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{90e5b50da19d788618006a0f8f93d6ed}
+      \strng{fullhash}{90e5b50da19d788618006a0f8f93d6ed}
+      \strng{bibnamehash}{90e5b50da19d788618006a0f8f93d6ed}
+      \strng{authorbibnamehash}{90e5b50da19d788618006a0f8f93d6ed}
+      \strng{authornamehash}{90e5b50da19d788618006a0f8f93d6ed}
+      \strng{authorfullhash}{90e5b50da19d788618006a0f8f93d6ed}
+      \field{labelalpha}{AG96}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Western Research Laboratory}
+      \field{title}{Shared Memory Consistency Models - A Tutorial}
+      \field{year}{1996}
+      \true{nocite}
+    \endentry
+    \entry{fences}{report}{}
+      \name{author}{4}{}{%
+        {{hash=ab3c145de719fd61234960cc55b23c27}{%
+           family={Alglave},
+           familyi={A\bibinitperiod},
+           given={Jade},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6e290efab614501d57bc84c863ce21ab}{%
+           family={Maranget},
+           familyi={M\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod}}}%
+        {{hash=05af72045565493cd85f8d5167330aa2}{%
+           family={Sarkar},
+           familyi={S\bibinitperiod},
+           given={Susmit},
+           giveni={S\bibinitperiod}}}%
+        {{hash=36aa14ea12e51326290dd02c24f754c2}{%
+           family={Sewell},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {INRIA University of Cambridge}%
+      }
+      \strng{namehash}{68d1eaf15cae9182757ed8242b6a7483}
+      \strng{fullhash}{43d32823abacb624b9009dec292aa81d}
+      \strng{bibnamehash}{68d1eaf15cae9182757ed8242b6a7483}
+      \strng{authorbibnamehash}{68d1eaf15cae9182757ed8242b6a7483}
+      \strng{authornamehash}{68d1eaf15cae9182757ed8242b6a7483}
+      \strng{authorfullhash}{43d32823abacb624b9009dec292aa81d}
+      \field{labelalpha}{Alg+10}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fences In Weak Memory Models}
+      \field{type}{techreport}
+      \field{year}{2010}
+      \true{nocite}
+    \endentry
+    \entry{syncornot}{report}{}
+      \name{author}{2}{}{%
+        {{hash=2cc27700c02d5dbc898ffd935dbc25cb}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Wu-chun},
+           giveni={W\bibinithyphendelim c\bibinitperiod}}}%
+        {{hash=450cf8bdd054ad892bb6f761b8019686}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Shucai},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f70594c0c72e5cd4a1634fcc4859bfe5}
+      \strng{fullhash}{f70594c0c72e5cd4a1634fcc4859bfe5}
+      \strng{bibnamehash}{f70594c0c72e5cd4a1634fcc4859bfe5}
+      \strng{authorbibnamehash}{f70594c0c72e5cd4a1634fcc4859bfe5}
+      \strng{authornamehash}{f70594c0c72e5cd4a1634fcc4859bfe5}
+      \strng{authorfullhash}{f70594c0c72e5cd4a1634fcc4859bfe5}
+      \field{labelalpha}{FX11}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Virginia Tech}
+      \field{title}{To GPU Synchronize or Not GPU Synchronize?}
+      \field{type}{techreport}
+      \field{year}{2011}
+      \true{nocite}
+    \endentry
+    \entry{cmc4}{report}{}
+      \name{author}{3}{}{%
+        {{hash=b333c2c686a4cd6c8ce24bbf47bc2912}{%
+           family={Gogia},
+           familyi={G\bibinitperiod},
+           given={Radhika},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e9b90e65d30d485f6c8c5a190fdcd7b7}{%
+           family={Chhabra},
+           familyi={C\bibinitperiod},
+           given={Preeti},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bf9ec44d4c330780aad79f74eeb93105}{%
+           family={Kumari},
+           familyi={K\bibinitperiod},
+           given={Rupa},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Dronacharya College Of Engineering}%
+      }
+      \strng{namehash}{3d52104c3c91765b48a21c621ad6ac6a}
+      \strng{fullhash}{3d52104c3c91765b48a21c621ad6ac6a}
+      \strng{bibnamehash}{3d52104c3c91765b48a21c621ad6ac6a}
+      \strng{authorbibnamehash}{3d52104c3c91765b48a21c621ad6ac6a}
+      \strng{authornamehash}{3d52104c3c91765b48a21c621ad6ac6a}
+      \strng{authorfullhash}{3d52104c3c91765b48a21c621ad6ac6a}
+      \field{labelalpha}{GCK14}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Consistency Models in Distributed Shared Memory Systems}
+      \field{type}{techreport}
+      \field{year}{2014}
+      \true{nocite}
+    \endentry
+    \entry{mcm3}{report}{}
+      \name{author}{1}{}{%
+        {{hash=e762cb57ed6d194410566c60ea80d867}{%
+           family={Gharachorloo},
+           familyi={G\bibinitperiod},
+           given={Kourosh},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Stanford University, Departments of Electrical Engineering}%
+        {Computer Science}%
+      }
+      \strng{namehash}{e762cb57ed6d194410566c60ea80d867}
+      \strng{fullhash}{e762cb57ed6d194410566c60ea80d867}
+      \strng{bibnamehash}{e762cb57ed6d194410566c60ea80d867}
+      \strng{authorbibnamehash}{e762cb57ed6d194410566c60ea80d867}
+      \strng{authornamehash}{e762cb57ed6d194410566c60ea80d867}
+      \strng{authorfullhash}{e762cb57ed6d194410566c60ea80d867}
+      \field{labelalpha}{Gha95}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Memory Consistency Models for Shared-Memory Multiprocessors}
+      \field{type}{techreport}
+      \field{year}{1995}
+      \true{nocite}
+    \endentry
+    \entry{msssm}{report}{}
+      \name{author}{1}{}{%
+        {{hash=47b42f84bac2f8d835e3973e96aed32a}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Mark\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Wisconsin, Madison}%
+      }
+      \strng{namehash}{47b42f84bac2f8d835e3973e96aed32a}
+      \strng{fullhash}{47b42f84bac2f8d835e3973e96aed32a}
+      \strng{bibnamehash}{47b42f84bac2f8d835e3973e96aed32a}
+      \strng{authorbibnamehash}{47b42f84bac2f8d835e3973e96aed32a}
+      \strng{authornamehash}{47b42f84bac2f8d835e3973e96aed32a}
+      \strng{authorfullhash}{47b42f84bac2f8d835e3973e96aed32a}
+      \field{labelalpha}{Hil98}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multiprocessors Should Support Simple Memory-Consistency Models}
+      \field{type}{techreport}
+      \field{year}{1998}
+      \true{nocite}
+    \endentry
+    \entry{exploit}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=85e4091cc8f4a6d49c38d5feba5f7039}{%
+           family={Jang},
+           familyi={J\bibinitperiod},
+           given={Byunghyun},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8cfad02d566c7e2318fdde10f3904d86}{%
+           family={Mistry},
+           familyi={M\bibinitperiod},
+           given={Perhaad},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d1fa84e91f36aab9b7b1dfac1b4f554a}{%
+           family={Schaa},
+           familyi={S\bibinitperiod},
+           given={Dana},
+           giveni={D\bibinitperiod}}}%
+        {{hash=7f42decef9a33d245e91363cb423ad21}{%
+           family={Kaeli},
+           familyi={K\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a84f9e0161787d28e7ed0182be5b746}
+      \strng{fullhash}{f879c6538f05d2ddfecd283533071bbc}
+      \strng{bibnamehash}{8a84f9e0161787d28e7ed0182be5b746}
+      \strng{authorbibnamehash}{8a84f9e0161787d28e7ed0182be5b746}
+      \strng{authornamehash}{8a84f9e0161787d28e7ed0182be5b746}
+      \strng{authorfullhash}{f879c6538f05d2ddfecd283533071bbc}
+      \field{labelalpha}{Jan+11}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Exploiting Memory Access Patterns to Improve Memory Performance in Data-Parallel Architectures}
+      \field{year}{2011}
+      \true{nocite}
+    \endentry
+    \entry{gpuhp}{report}{}
+      \name{author}{8}{}{%
+        {{hash=d896f9459628aaead8d5d6955aa6bc8c}{%
+           family={Kindratenko},
+           familyi={K\bibinitperiod},
+           given={Volodymyr\bibnamedelima V.},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=a189ffafe5addebee7cf9a4e908cc45b}{%
+           family={Enos},
+           familyi={E\bibinitperiod},
+           given={Jeremy\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=41f1999c62ce0876a4024c2e535c5cd4}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Guochun},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2692a3a146a1c3fcfa0ad2d917d98527}{%
+           family={Showerman},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=ffa8ae8a44f49be64823fe9fe8bba703}{%
+           family={Arnold},
+           familyi={A\bibinitperiod},
+           given={Galen\bibnamedelima W.},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=2cca89cab87c8bf47572a366ab2a7f33}{%
+           family={Stone},
+           familyi={S\bibinitperiod},
+           given={John\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=0bc1fb335c8faed26612fbc2ab395aad}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={James\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=11660273eca466b11e7082a4dafca0f0}{%
+           family={Hwu},
+           familyi={H\bibinitperiod},
+           given={Wen-mei},
+           giveni={W\bibinithyphendelim m\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Illinois}%
+      }
+      \strng{namehash}{c95c528d1b4bc757001fc22d3393ca3f}
+      \strng{fullhash}{308cc66e1a7b11d59d756575a8b32e4f}
+      \strng{bibnamehash}{c95c528d1b4bc757001fc22d3393ca3f}
+      \strng{authorbibnamehash}{c95c528d1b4bc757001fc22d3393ca3f}
+      \strng{authornamehash}{c95c528d1b4bc757001fc22d3393ca3f}
+      \strng{authorfullhash}{308cc66e1a7b11d59d756575a8b32e4f}
+      \field{labelalpha}{Kin+09}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GPU Clusters for High-Performance Computing}
+      \field{type}{techreport}
+      \field{year}{2009}
+      \true{nocite}
+    \endentry
+    \entry{lamp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5d77435450d10a850a5b58577b9a456b}{%
+           family={Lamport},
+           familyi={L\bibinitperiod},
+           given={Leslie},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Transactions on Computers}%
+      }
+      \strng{namehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{fullhash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{bibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorbibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authornamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorfullhash}{5d77435450d10a850a5b58577b9a456b}
+      \field{labelalpha}{Lam79}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs}
+      \field{year}{1979}
+      \true{nocite}
+    \endentry
+    \entry{gpuhp2}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=ae2275ab9437eee19284a72c748c6b41}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kenneth\bibnamedelima S.},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Virginia Polytechnic Institute}%
+        {State University}%
+      }
+      \strng{namehash}{ae2275ab9437eee19284a72c748c6b41}
+      \strng{fullhash}{ae2275ab9437eee19284a72c748c6b41}
+      \strng{bibnamehash}{ae2275ab9437eee19284a72c748c6b41}
+      \strng{authorbibnamehash}{ae2275ab9437eee19284a72c748c6b41}
+      \strng{authornamehash}{ae2275ab9437eee19284a72c748c6b41}
+      \strng{authorfullhash}{ae2275ab9437eee19284a72c748c6b41}
+      \field{labelalpha}{Lee09}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Characterization and Exploitation of GPU Memory Systems}
+      \field{type}{mathesis}
+      \field{year}{2009}
+      \true{nocite}
+    \endentry
+    \entry{pram}{report}{}
+      \name{author}{2}{}{%
+        {{hash=f79c1f3b4813bbcb4304ec4c38499acc}{%
+           family={Lipton},
+           familyi={L\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0e4cc108cda375b81dc38a3a985f0679}{%
+           family={Sandberg},
+           familyi={S\bibinitperiod},
+           given={J.S.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Princeton University, Department of Computer Science}%
+      }
+      \strng{namehash}{e0a762c2eaeea0421c954392a56d0a66}
+      \strng{fullhash}{e0a762c2eaeea0421c954392a56d0a66}
+      \strng{bibnamehash}{e0a762c2eaeea0421c954392a56d0a66}
+      \strng{authorbibnamehash}{e0a762c2eaeea0421c954392a56d0a66}
+      \strng{authornamehash}{e0a762c2eaeea0421c954392a56d0a66}
+      \strng{authorfullhash}{e0a762c2eaeea0421c954392a56d0a66}
+      \field{labelalpha}{LS88}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PRAM: A Scalable Shared Memory}
+      \field{type}{techreport}
+      \field{year}{1988}
+      \true{nocite}
+    \endentry
+    \entry{litmus}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4104c69b7cedb1708f041129e1872f25}{%
+           family={Mador-Haim},
+           familyi={M\bibinithyphendelim H\bibinitperiod},
+           given={Sela},
+           giveni={S\bibinitperiod}}}%
+        {{hash=29db5b94c11f4e678669998ac7867043}{%
+           family={Alur},
+           familyi={A\bibinitperiod},
+           given={Rajeev},
+           giveni={R\bibinitperiod}}}%
+        {{hash=492dc40d3b4b32a5e1989dc839948d70}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Milo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab0958196bc85390a2a2b0f6a04a2b6c}
+      \strng{fullhash}{ab0958196bc85390a2a2b0f6a04a2b6c}
+      \strng{bibnamehash}{ab0958196bc85390a2a2b0f6a04a2b6c}
+      \strng{authorbibnamehash}{ab0958196bc85390a2a2b0f6a04a2b6c}
+      \strng{authornamehash}{ab0958196bc85390a2a2b0f6a04a2b6c}
+      \strng{authorfullhash}{ab0958196bc85390a2a2b0f6a04a2b6c}
+      \field{labelalpha}{MAM11}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{DAC'11 Proceedings of the 48th Design Automation Conference}
+      \field{title}{Litmus tests for comparing memory consistency models: how long do they need to be?}
+      \field{year}{2011}
+      \true{nocite}
+    \endentry
+    \entry{mcm5}{report}{}
+      \name{author}{1}{}{%
+        {{hash=9935fc21094a1445777274425a76cca9}{%
+           family={Mosberger},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Department of Computer Science - The University of Arizona}%
+      }
+      \strng{namehash}{9935fc21094a1445777274425a76cca9}
+      \strng{fullhash}{9935fc21094a1445777274425a76cca9}
+      \strng{bibnamehash}{9935fc21094a1445777274425a76cca9}
+      \strng{authorbibnamehash}{9935fc21094a1445777274425a76cca9}
+      \strng{authornamehash}{9935fc21094a1445777274425a76cca9}
+      \strng{authorfullhash}{9935fc21094a1445777274425a76cca9}
+      \field{labelalpha}{Mos93}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Memory Consistency Models}
+      \field{type}{techreport}
+      \field{year}{1993}
+      \true{nocite}
+    \endentry
+    \entry{gpucc}{report}{}
+      \name{author}{1}{}{%
+        {{hash=bde7f7b7bb6b34d958c0f4e659c25b56}{%
+           family={Rieber},
+           familyi={R\bibinitperiod},
+           given={Dennis\bibnamedelima Sebastian},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universitaet Heidelberg}%
+      }
+      \strng{namehash}{bde7f7b7bb6b34d958c0f4e659c25b56}
+      \strng{fullhash}{bde7f7b7bb6b34d958c0f4e659c25b56}
+      \strng{bibnamehash}{bde7f7b7bb6b34d958c0f4e659c25b56}
+      \strng{authorbibnamehash}{bde7f7b7bb6b34d958c0f4e659c25b56}
+      \strng{authornamehash}{bde7f7b7bb6b34d958c0f4e659c25b56}
+      \strng{authorfullhash}{bde7f7b7bb6b34d958c0f4e659c25b56}
+      \field{labelalpha}{Rie16}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GPU Concurrency and Consistency}
+      \field{type}{techreport}
+      \field{year}{2016}
+      \true{nocite}
+    \endentry
+    \entry{optim}{article}{}
+      \name{author}{6}{}{%
+        {{hash=2b5df2c7a311f4190006208c51e2dcd7}{%
+           family={Ryoo},
+           familyi={R\bibinitperiod}}}%
+        {{hash=b743e3809b345da599c96cf04ebd0aca}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod}}}%
+        {{hash=118f2b5f14290b99084323da5aa7de98}{%
+           family={Baghsorkhi},
+           familyi={B\bibinitperiod}}}%
+        {{hash=2ff4ab1d379832d3edee28194fb4e7b2}{%
+           family={Stone},
+           familyi={S\bibinitperiod}}}%
+        {{hash=0893bf6e9e07c2fe86ba8eea9f9eb4b1}{%
+           family={Kirk},
+           familyi={K\bibinitperiod}}}%
+        {{hash=f46e674332256475caa8dd9f5b664f65}{%
+           family={Hwu},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {PPoPP '08 Proceedings of the 13th ACM SIGPLAN Symposium on Principles}%
+        {practice of parallel programming}%
+      }
+      \strng{namehash}{12b6c0c0d8045b792002cf3b3af9fa4a}
+      \strng{fullhash}{e3d2925ff6b9ebc5d673b0b917a7a6d1}
+      \strng{bibnamehash}{12b6c0c0d8045b792002cf3b3af9fa4a}
+      \strng{authorbibnamehash}{12b6c0c0d8045b792002cf3b3af9fa4a}
+      \strng{authornamehash}{12b6c0c0d8045b792002cf3b3af9fa4a}
+      \strng{authorfullhash}{e3d2925ff6b9ebc5d673b0b917a7a6d1}
+      \field{labelalpha}{Ryo+08}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Optimization principles and application performance evaluation of a multithreaded GPU using CUDA}
+      \field{year}{2008}
+      \true{nocite}
+    \endentry
+    \entry{eesmog}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8afe0ed25cf446fc9c7e3e0e7a2234b6}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Abhayendra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b53971bd8b5e500a7432f5641d810adb}{%
+           family={Aga},
+           familyi={A\bibinitperiod},
+           given={Shaizeen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=512214f61c0fbd680a0bde08a375a5ed}{%
+           family={Narayanasamy},
+           familyi={N\bibinitperiod},
+           given={Satish},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {University of Michigan, Department of Computer Science}%
+        {Engineering}%
+      }
+      \strng{namehash}{2b042d91bdc4596e96fb15270231c797}
+      \strng{fullhash}{2b042d91bdc4596e96fb15270231c797}
+      \strng{bibnamehash}{2b042d91bdc4596e96fb15270231c797}
+      \strng{authorbibnamehash}{2b042d91bdc4596e96fb15270231c797}
+      \strng{authornamehash}{2b042d91bdc4596e96fb15270231c797}
+      \strng{authorfullhash}{2b042d91bdc4596e96fb15270231c797}
+      \field{labelalpha}{SAN12}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Efficiently Enforcing Strong Memory Ordering in GPUs}
+      \field{year}{2012}
+      \true{nocite}
+    \endentry
+    \entry{theorymm}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=6627ebd453c9bb54fd252f26892dff58}{%
+           family={Saraswat},
+           familyi={S\bibinitperiod},
+           given={Vijay\bibnamedelima A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d1f744ddd33c0510062714649ae2f09a}{%
+           family={Jagadeesan},
+           familyi={J\bibinitperiod},
+           given={Radha},
+           giveni={R\bibinitperiod}}}%
+        {{hash=25eb73e078c493795f2e89b87026f5d6}{%
+           family={Michael},
+           familyi={M\bibinitperiod},
+           given={Maged},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5b17e0ed63fbd132011a55c978f8f4a4}{%
+           family={Praun},
+           familyi={P\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{08c3d4b9818c2b80b00060f527dfdf00}
+      \strng{fullhash}{04ad85b42cfb177f1f32306bc2711ff7}
+      \strng{bibnamehash}{08c3d4b9818c2b80b00060f527dfdf00}
+      \strng{authorbibnamehash}{08c3d4b9818c2b80b00060f527dfdf00}
+      \strng{authornamehash}{08c3d4b9818c2b80b00060f527dfdf00}
+      \strng{authorfullhash}{04ad85b42cfb177f1f32306bc2711ff7}
+      \field{labelalpha}{Sar+11}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Theory Of Memory Models}
+      \field{year}{2011}
+      \true{nocite}
+    \endentry
+    \entry{mcm}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d051d704f0062f0076981978c96b59dd}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Akshay},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6f1b96f2da9f2a7017052b403d88a7d2}{%
+           family={Basora},
+           familyi={B\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6f1f5c1cff49e557d9a784acc77d1f25}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Ankur},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Dronacharya College of Engineering, International Journal of Enhanced Research in Management}%
+        {Computer Applications}%
+      }
+      \strng{namehash}{413cc9d9c4ce063789efac63fc29d81d}
+      \strng{fullhash}{413cc9d9c4ce063789efac63fc29d81d}
+      \strng{bibnamehash}{413cc9d9c4ce063789efac63fc29d81d}
+      \strng{authorbibnamehash}{413cc9d9c4ce063789efac63fc29d81d}
+      \strng{authornamehash}{413cc9d9c4ce063789efac63fc29d81d}
+      \strng{authorfullhash}{413cc9d9c4ce063789efac63fc29d81d}
+      \field{labelalpha}{SBS13}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Memory Consistency Models}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+    \entry{ocofwmcm}{report}{}
+      \name{author}{1}{}{%
+        {{hash=e09d12b3b295c04563df3ea76db6b027}{%
+           family={Senftleben},
+           familyi={S\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Department of Computer Science - University of Kaiserslautern}%
+      }
+      \strng{namehash}{e09d12b3b295c04563df3ea76db6b027}
+      \strng{fullhash}{e09d12b3b295c04563df3ea76db6b027}
+      \strng{bibnamehash}{e09d12b3b295c04563df3ea76db6b027}
+      \strng{authorbibnamehash}{e09d12b3b295c04563df3ea76db6b027}
+      \strng{authornamehash}{e09d12b3b295c04563df3ea76db6b027}
+      \strng{authorfullhash}{e09d12b3b295c04563df3ea76db6b027}
+      \field{labelalpha}{Sen13}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Operational Characterization of Weak Memory Consistency Models}
+      \field{type}{techreport}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+    \entry{primer}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3cd83cc154e391751cac11e55a4854aa}{%
+           family={Sorin},
+           familyi={S\bibinitperiod},
+           given={D.J.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c5fd1af61abfb4398ded7625bf0ea46f}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={M.D.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=42a0890222987693c1e6a39132336e41}{%
+           family={Wood},
+           familyi={W\bibinitperiod},
+           given={D.A.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Morgan & Claypool Publishers}%
+      }
+      \strng{namehash}{0aa283087c66c4c96b354aca88aad669}
+      \strng{fullhash}{0aa283087c66c4c96b354aca88aad669}
+      \strng{bibnamehash}{0aa283087c66c4c96b354aca88aad669}
+      \strng{authorbibnamehash}{0aa283087c66c4c96b354aca88aad669}
+      \strng{authornamehash}{0aa283087c66c4c96b354aca88aad669}
+      \strng{authorfullhash}{0aa283087c66c4c96b354aca88aad669}
+      \field{labelalpha}{SHW11}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Synthesis Lectures on Computer Architecture}
+      \field{title}{A Primer on Memory Consistency and Cache coherence}
+      \field{year}{2011}
+      \true{nocite}
+    \endentry
+    \entry{cudabe}{book}{}
+      \name{author}{2}{}{%
+        {{hash=19ac2cba6656e51434485cb0fb8356ff}{%
+           family={Sanders},
+           familyi={S\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d098374481cf4c992445f4e3edd30d20}{%
+           family={Kandrot},
+           familyi={K\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{a22d53e3fc6f2e9fd83e9d5626645b73}
+      \strng{fullhash}{a22d53e3fc6f2e9fd83e9d5626645b73}
+      \strng{bibnamehash}{a22d53e3fc6f2e9fd83e9d5626645b73}
+      \strng{authorbibnamehash}{a22d53e3fc6f2e9fd83e9d5626645b73}
+      \strng{authornamehash}{a22d53e3fc6f2e9fd83e9d5626645b73}
+      \strng{authorfullhash}{a22d53e3fc6f2e9fd83e9d5626645b73}
+      \field{labelalpha}{SK10}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{ISBN:0131387685 9780131387683}
+      \field{title}{CUDA by Example: An Introduction to General-Purpose GPU Programming}
+      \field{year}{2010}
+      \true{nocite}
+    \endentry
+    \entry{unified}{report}{}
+      \name{author}{2}{}{%
+        {{hash=7300d9c8cea3f40faafe54ae894809ca}{%
+           family={Steinke},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d0c0d6163e0faf13d63da2789a15c3b9}{%
+           family={Nutt},
+           familyi={N\bibinitperiod},
+           given={Gary\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {University of Colorado at Boulder, Department of Computer Science}%
+        {Engineering}%
+      }
+      \strng{namehash}{ab8e4fe72b309758c8292a21eaefaf81}
+      \strng{fullhash}{ab8e4fe72b309758c8292a21eaefaf81}
+      \strng{bibnamehash}{ab8e4fe72b309758c8292a21eaefaf81}
+      \strng{authorbibnamehash}{ab8e4fe72b309758c8292a21eaefaf81}
+      \strng{authornamehash}{ab8e4fe72b309758c8292a21eaefaf81}
+      \strng{authorfullhash}{ab8e4fe72b309758c8292a21eaefaf81}
+      \field{labelalpha}{SN04}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Unified Theory of Shared Memory Consistency}
+      \field{type}{techreport}
+      \field{year}{2004}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

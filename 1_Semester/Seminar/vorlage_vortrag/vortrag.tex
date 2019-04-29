@@ -1,0 +1,54 @@
+% standardmäßig im 4:3 Format
+% verwende \documentclass[169]{sikslides} für 16:9
+
+\documentclass{sikslides}
+\usepackage{pgfpages}
+\setbeameroption{show notes on second screen}
+
+\title[Kurztitel]{Titel der Seminararbeit}
+\subtitle{Seminar \\Cyber-Physical Systems} % Bachelor
+%\subtitle{Seminar \\Safety-Critical Systems} % Master
+%\subtitle{Seminar Grundlagen\\ moderner Prozessorarchitekturen} % Bachelor
+%\subtitle{Seminar Prozessorarchitekturen:\\Aktuelle Forschungstheme} % Master
+\author{Vorname Nachname}
+\date[19.10.2018]{19. Oktober 2018}
+
+\begin{document}
+
+\titleframe
+
+% erneutes Bauen notwendig, um Gliederung zu aktualisieren
+\begin{frame}
+    \frametitle{Gliederung}
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+\sectionframe{Erster Teil}
+
+\begin{frame}
+  \frametitle{Überschrift}
+  \begin{itemize}
+  \item Aufzählungspunkt
+    \begin{itemize}
+    \item Eine Ebene tiefer
+    \item ...
+
+
+    \end{itemize}
+  \item Noch ein Punkt
+  \end{itemize}
+\end{frame}
+\note{mamama}
+\sectionframe{Zweiter Teil}
+
+\begin{frame}
+    \frametitle{Überschrift}
+    Text ohne Aufzählung
+    \vfill
+    \begin{center}
+        \Large\textbf{Formatierung wie in normalen \LaTeX-Dokumenten möglich}
+    \end{center}
+\end{frame}
+
+\end{document}
+
