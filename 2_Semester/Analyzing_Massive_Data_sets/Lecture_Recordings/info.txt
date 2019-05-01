@@ -1,0 +1,3 @@
+Hinweis: die folgenden Dateien sind nicht im Archiv enthalten, da sie lediglich verlinkt wurden:
+00-introduction-2019-04-23.mp4
+01-basic-tools-python-2019-04-25.mp4
