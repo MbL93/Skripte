@@ -1,0 +1,9 @@
+Der Installer ist zu finden unter:
+
+\\cfs-informatik.informatik.uni-augsburg.de\swtse-d\Praktikumsrechner\Industrie 4.0
+
+Eine neuere Version ist hier direkt zu finden:
+
+https://www.br-automation.com/de-de/downloads/?tx_brcdn_downloadlist%5Bid%5D=DWL%40DWL10000343742%4010&tx_brcdn_downloadlist%5Blang%5D=%2A&tx_brcdn_downloadlist%5Baction%5D=download&tx_brcdn_downloadlist%5Bcontroller%5D=Download&cHash=f2ba95e7d307e0e17f9fbcfa1cc9182a
+
+Den oberen Netzwerkpfad im VPN der Uni im Explorer eingeben oder die Datei direkt herunterladen und Automation Studio und den VNC Viewer (Deutsch/Englisch) installieren.
