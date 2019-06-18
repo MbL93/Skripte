@@ -1,0 +1,10 @@
+Um das Garagentorprojekt starten zu können müssen folgende Schritte durchgeführt werden:
+- Starten des B&R Upgrade Dienstes in den Windows Diensten
+- Diese Pakete in Extras > Upgrades installieren:
+	- Automation Runtime J4.25
+		- ARSIM
+		- PPC7x
+	- Technology Packages
+		- mapp Technologies 1.30
+	- Motion Control
+		- ACP10 3.13.1
