@@ -1,0 +1,33 @@
+Aufgabe 2:
+
+a) 
+Waldbrandmeldesystem: Mehrere, verstreute Sensoren die nur ihre Nachbarn in der näheren Umgebung kennen. Bei einem Feuer wird ein Broadcast an alle Nachbarknoten ausgesendet, die dann einen Broadcast an alle ihre Nachbarn senden ect. Keine Zentrale Steuereinheit. Sensoren beeinflussen/steuern nicht ihre Nachbarn. Das System funktioniert beim Ausfall einzelner Sensoren (die gut verteilt wurden) weiterhin. Das Hinzufügen eines weiteren Sensors beeinträchtigt die Funktionsweise des Systems in keiner Weise. Die gerade genannten Punkte entsprechen der Definition auf Folie 47.
+Quelle: Ad-Hoc und Sensornetze Vorlesung am Organic Computing Lehrstuhl.
+
+Das Schwarmverhalten des Atlantischen Herings: Mehrere individuelle Fische (Agenten) bilden zusammen einen Schwarm (System) mit dem Ziel sich besser vor Fressfeinden zu schützen. Der Schwarm wird nicht von außen gesteuert. Die lokalen Bewegungen der einzelnen Agenten bilden zusammen die globale Organisation des Schwarms ab. Ein Fisch signalisiert durch seine Bewegungen den anderen Fischen, die ihn entweder sehen und/oder hören, den einzuschlagenden Pfad des Schwarms in eine generelle Richtung. Eine klare Struktur ist erkennbar. Die genannten Eigenschaften entsprechen der Definition auf Folie 46.
+Quelle: https://en.wikipedia.org/wiki/Atlantic_herring 
+
+b)
+Agenten: Sensoren
+Umwelteinflüsse auf den Agenten: Verändern der Messwerte, führt gegebenenfalls zum Auslösen einer Aktion(Alarm)
+Interaktionen zwischen den Agenten: Aussenden von Broadcasts bei einem Feuer oder zur periodischen Feststellung der lokalen Nachbaragenten
+Interaktionen Umwelt-Agenten: Der Agent misst die Temperatur der näheren Umgebung
+
+Agenten: Fische
+Umwelteinflüsse auf den Agenten: Natur lenkt durch ihre Gegebenheiten das Fischverhalten (sich nähernde Feinde)
+Interaktionen zwischen den Agenten: Ein Fisch signalisiert durch seine Bewegungen den anderen Fischen, die ihn entweder sehen und/oder hören, den einzuschlagenden Pfad des Schwarms in eine generelle Richtung
+Interaktionen Umwelt-Agenten: Aufbrauchen von Rohstoffen (Futter) durch den Schwarm, Abschreckung vor potentiellen Fressfeinden durch den Zusammenschluss
+
+Aufgabe 3
+a) 
+Wiederholte Betätigung mit energy < 30: Die Anzahl der turtles bricht deutlich ein. Das wird unterstrichen durch die gut erkennbaren Zacken innerhalb des Graphen. Bei jedem Einbruch der turtle Population wächst die Anzahl der grünen Gitterflächen leicht an (d.h. es wächst nicht so stark wie der Abfall der turtle Population).
+
+Wiederholte Betätigung mit energy < 40: Bei einer aggressiveren Krankheit sind die oben genannten Zacken im Graph noch steiler. Zudem wächst die Anzahl der grünen Gitterflächen stärker an als oben beschrieben. Dabei sind Zacken im Graph gut erkennbar. Zusätzlich ist die Anzahl der grünen Flächen bei einer wiederholten Betätigung des Buttons konstant größer als die Anzahl der turtles.
+
+c)
+Auswirkungen eines spontanen Nahrungsanstieg auf die Population: Bei jeder Betätigung des grow Buttons steigt die Population stark an (Erkennbar an den Zacken im Verlauf des Graphen). Danach sinkt die Anzahl der turtles bis sich die Population einpendelt und auf einem stabilen Niveau bleibt. Die Anzahl der turtles ist dabei immer größer als die Anzahl der grünen patches, außer am Zeitpunkt der Betätigung des Buttons.
+
+
+Krankheit und Wachstum liegen zeitlich (fast) zusammen: Die Zacken beim Graphen der die Anzahl der turtles beschreibt scheinen an der Spitze abgerundeter zu sein. Die Maxima beider Graphen sind bei einem Anstieg etwa auf dem selben Niveau. Während die Minima des Grass Graphen weiter unten liegen als die des turtle Graphen. Der Anstieg beider Graphen durch einen grow Effekt ist dabei stärker als der Einbruch der durch die Krankheit verursacht wird (energy = 30).
+
+
