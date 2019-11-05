@@ -1,0 +1,131 @@
+% Shahin Amiriparian, M.Sc. - Universität Passau, Chair of Complex and Intelligent Systems
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{fancyhdr}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{babel}
+\usepackage{ulem}
+\usepackage{color}
+\usepackage{media9}
+%\usepackage[usenames,dvipsnames]{xcolor} %xcolor
+\usepackage{soul}
+\definecolor{purp}{rgb}{0.3,0.1,0.4}
+\definecolor{blau}{rgb}{0.4,0.4,0.9}
+\newcommand{\aebc}[1] {{\bf \color{purp} aeb: #1}}
+\newcommand{\aeb}[1] {{ \color{blau} #1}}
+
+\hypersetup{
+	bookmarks=true,
+	unicode=false,
+	pdftoolbar=true,
+	pdfmenubar=true,
+	pdffitwindow=false,
+	pdfstartview={FitH},
+	pdftitle={My title},
+	pdfauthor={Author},
+	pdfsubject={Subject},
+	pdfcreator={Creator},
+	pdfproducer={Producer},
+	pdfkeywords={keyword1} {key2} {key3},
+	pdfnewwindow=true,
+	colorlinks=true,
+	linkcolor=red,
+	citecolor=green,
+	filecolor=magenta,
+	urlcolor=cyan
+}
+
+%%Added
+\usepackage{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Lehrstuhl}{Lehrstuhl für EIHW}
+\newcommand{\Uni}{Universität Augsburg}
+\newcommand{\Name}{Manuel Milling, Thomas Wiest}
+\newcommand{\Fach}{Übung zu Deep Learning}
+\newcommand{\Semester}{Wintersemester 2019/20}
+\newcommand{\Uebung}{Tutorial 02: Mathematical Background (20P)} 
+\newcommand{\dx}{\frac{\mathrm{d}}{\mathrm{d}x}}
+\newcommand{\dd}[1]{\frac{\mathrm{d}}{\mathrm{d} #1}}
+\newcommand{\empm}{\boldsymbol}
+%  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \vspace*{0.5cm}
+  \textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: \Uebung{}},
+    pdfauthor={\Name},
+    pdfborder={0 0 0}
+}
+
+\lstset{ %
+language=java,
+basicstyle=\footnotesize\tt,
+showtabs=false,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+extendedchars=true,
+showstringspaces=false,
+flexiblecolumns=true,
+}
+
+\title{\Uebung{}}
+\author{\Name{}}
+
+\begin{document}
+\thispagestyle{fancy}
+\lhead{\rm \small \Lehrstuhl{} \\ \small \Uni{} \\ \small \Name{} }
+\rhead{\rm \Fach{} \\  \Semester{} \\ \Uebung{}}
+\vspace*{0.2cm}
+\begin{center}
+\LARGE \sf \textbf{\Uebung{}}
+\end{center}
+\vspace*{0.2cm}
+Please submit your answers by 4th Nov 23:59 to \href{mailto: 	manuel.milling@informatik.uni-augsburg.de}{ 	manuel.milling@informatik.uni-augsburg.de}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Linear Algebra}
+
+\subsection*{Exercise 1 (2P)}
+
+\subsection*{Exercise 2 (3P)}
+
+\subsection*{Exercise 3 (4P)}
+
+\section*{Differential Calculus}
+\subsection*{Exercise 4 (3P)}
+
+\subsection*{Exercise 5 (4P)}
+
+\subsection*{Exercise 6 (4P)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
