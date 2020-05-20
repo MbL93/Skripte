@@ -1,0 +1,12 @@
+    2019_11_05_DL_FeedForward_Networks
+    2019_11_12_DL_FeedForward_2
+    2019_11_19_DL_CNN_RNN
+    2019_11_26_DL_BackProg_Reg
+    2019_12_10_DL_Seq2Seq
+    2020_01_07_DL_ReinforcementLearning
+    2020_01_21_DL_NextGen_Prt2
+    Homework/Handout 02: Mathematical Background
+    Homework/Handout 03: Fully Connected Neural Nets - Forward Propagation
+    Homework/Handout 04: Fully Connected Neural Nets - Backpropagation
+    Homework/Handout 05: Recurrent Neural Networks
+    Homework/Handout 06: Introduction to Keras (CNN Part, not Keras)
