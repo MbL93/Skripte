@@ -1,0 +1,12 @@
+- Hauptspeicher wegen Schnelligkeit, deshalb aufteilen
+1. thema: Meine PM: Schnelligkeit auswerten heutzutage
+
+2. thema: kann man synch pro gruppe in pamidataflow abbilden? man braucht nur pro gruppe nicht global sync
+-Pamidataflow versucht tweets anhand zeitstempel in reihenfolge zu halten
+-Batching viel besser (arbeit mayer)
+-pamidataflow garantiert keine sortierung innerhalb batch
+
+3. thema: Nicht in einem schritt sondern mehrere
+manche fehlen, nachbarschaftssuche: 2 schritte weit schauen
+
+bitbucket
