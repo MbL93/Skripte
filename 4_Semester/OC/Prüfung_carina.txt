@@ -1,0 +1,11 @@
+- Was ist OC und Eigenschaften des Systems?
+- Emergenz und Entropie: Definition, Zusammenhang, Hängt von Beobachtung ab
+- Robustheit + Kontroll Mechanismus
+- Controller Observer Modell zeichnen und erklären -> intensiv 
+- Multischichten Architektur Zeichnen und erklären -> intensiv
+- XCS Komponenten und Update Regeln
+
+Jemand anders:
+- Hill Clime
+- Simulated Annealing
+- Swarm Optimisation
